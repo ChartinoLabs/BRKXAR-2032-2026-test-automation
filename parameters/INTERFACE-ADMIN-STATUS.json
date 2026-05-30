@@ -1,0 +1,40 @@
+{
+  "devices": {
+    "R1": {
+      "status": {
+        "GigabitEthernet1": "up",
+        "GigabitEthernet2": "up",
+        "GigabitEthernet3": "up",
+        "GigabitEthernet4": "administratively down",
+        "Loopback0": "up"
+      }
+    },
+    "R2": {
+      "status": {
+        "GigabitEthernet1": "up",
+        "GigabitEthernet2": "up",
+        "GigabitEthernet3": "up",
+        "GigabitEthernet4": "administratively down",
+        "Loopback0": "up"
+      }
+    },
+    "R3": {
+      "status": {
+        "GigabitEthernet1": "up",
+        "GigabitEthernet2": "up",
+        "GigabitEthernet3": "up",
+        "GigabitEthernet4": "administratively down",
+        "Loopback0": "up"
+      }
+    },
+    "R4": {
+      "status": {
+        "GigabitEthernet1": "up",
+        "GigabitEthernet2": "up",
+        "GigabitEthernet3": "up",
+        "GigabitEthernet4": "administratively down",
+        "Loopback0": "up"
+      }
+    }
+  }
+}

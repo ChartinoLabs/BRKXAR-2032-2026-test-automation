@@ -1,0 +1,38 @@
+{
+  "devices": {
+    "R1": {
+      "adjacencies": {
+        "GigabitEthernet3": {
+          "192.0.2.3": "__exists__"
+        }
+      }
+    },
+    "R2": {
+      "adjacencies": {
+        "GigabitEthernet3": {
+          "192.0.2.4": "__exists__"
+        }
+      }
+    },
+    "R3": {
+      "adjacencies": {
+        "GigabitEthernet3": {
+          "192.0.2.1": "__exists__"
+        },
+        "GigabitEthernet2": {
+          "192.0.2.4": "__exists__"
+        }
+      }
+    },
+    "R4": {
+      "adjacencies": {
+        "GigabitEthernet3": {
+          "192.0.2.2": "__exists__"
+        },
+        "GigabitEthernet2": {
+          "192.0.2.3": "__exists__"
+        }
+      }
+    }
+  }
+}

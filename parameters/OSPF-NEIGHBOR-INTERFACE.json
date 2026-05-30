@@ -1,0 +1,44 @@
+{
+  "devices": {
+    "R1": {
+      "values": {
+        "GigabitEthernet3": {
+          "192.0.2.3": "10.0.13.2"
+        },
+        "GigabitEthernet2": {
+          "192.0.2.2": "10.0.12.2"
+        }
+      }
+    },
+    "R2": {
+      "values": {
+        "GigabitEthernet3": {
+          "192.0.2.4": "10.0.24.2"
+        },
+        "GigabitEthernet2": {
+          "192.0.2.1": "10.0.12.1"
+        }
+      }
+    },
+    "R3": {
+      "values": {
+        "GigabitEthernet3": {
+          "192.0.2.1": "10.0.13.1"
+        },
+        "GigabitEthernet2": {
+          "192.0.2.4": "10.0.34.2"
+        }
+      }
+    },
+    "R4": {
+      "values": {
+        "GigabitEthernet3": {
+          "192.0.2.2": "10.0.24.1"
+        },
+        "GigabitEthernet2": {
+          "192.0.2.3": "10.0.34.1"
+        }
+      }
+    }
+  }
+}

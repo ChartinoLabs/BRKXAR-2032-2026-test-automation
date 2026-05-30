@@ -1,0 +1,16 @@
+{
+  "devices": {
+    "R1": {
+      "operator": "gte"
+    },
+    "R2": {
+      "operator": "gte"
+    },
+    "R3": {
+      "operator": "gte"
+    },
+    "R4": {
+      "operator": "gte"
+    }
+  }
+}

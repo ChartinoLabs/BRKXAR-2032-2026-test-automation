@@ -1,0 +1,13 @@
+{
+  "timeout": 60,
+  "interval": 5,
+  "devices": {
+    "R1": {
+      "absent": {
+        "GigabitEthernet2": [
+          "192.0.2.2"
+        ]
+      }
+    }
+  }
+}

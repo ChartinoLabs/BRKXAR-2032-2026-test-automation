@@ -1,0 +1,13 @@
+{
+  "devices": {
+    "R1": {
+      "interfaces": {
+        "GigabitEthernet2": {
+          "description": "R1 to R2",
+          "status": "up",
+          "protocol": "up"
+        }
+      }
+    }
+  }
+}

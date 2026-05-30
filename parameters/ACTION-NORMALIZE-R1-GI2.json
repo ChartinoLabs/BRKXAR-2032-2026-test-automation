@@ -1,0 +1,13 @@
+{
+  "devices": {
+    "R1": {
+      "interfaces": {
+        "GigabitEthernet2": {
+          "description": "",
+          "status": "administratively down",
+          "protocol": "down"
+        }
+      }
+    }
+  }
+}
