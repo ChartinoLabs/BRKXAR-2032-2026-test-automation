@@ -1,0 +1,7 @@
+test_case_groups:
+  action-shut-r1r2:
+    tests:
+    - ACTION-SHUT-R1-GI2
+  action-normalize-r1r2:
+    tests:
+    - ACTION-NORMALIZE-R1-GI2

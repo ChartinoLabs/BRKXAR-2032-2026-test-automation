@@ -1,0 +1,51 @@
+scenarios:
+  link-shutdown-r1r2:
+    name: R1 to R2 Link Shutdown and Recovery
+    phases:
+      pre-change:
+        name: Pre-Change Baseline
+        test_case_groups:
+        - version-baseline
+        - bgp-summary-baseline
+        - ospf-neighbor-baseline
+        - interface-baseline
+      shutdown:
+        name: Shut R1 GigabitEthernet2 (R1-R2 link)
+        depends_on:
+        - pre-change
+        test_case_groups:
+        - action-shut-r1r2
+      gate-post-shutdown:
+        name: Post-Shutdown Convergence Gate
+        depends_on:
+        - shutdown
+        test_case_groups:
+        - gate-r1-r2-link-shutdown
+      post-shutdown:
+        name: Post-Shutdown Verification
+        depends_on:
+        - gate-post-shutdown
+        test_case_groups:
+        - bgp-summary-baseline
+        - ospf-neighbor-baseline-post-shutdown
+      normalize:
+        name: Normalize R1 GigabitEthernet2 (R1-R2 link)
+        depends_on:
+        - post-shutdown
+        test_case_groups:
+        - action-normalize-r1r2
+      gate-post-normalize:
+        name: Post-Normalize Convergence Gate
+        depends_on:
+        - normalize
+        test_case_groups:
+        - gate-normal
+      post-normalize:
+        name: Post-Normalize Verification
+        depends_on:
+        - gate-post-normalize
+        test_case_groups:
+        - version-baseline
+        - bgp-summary-baseline
+        - ospf-neighbor-baseline
+        - interface-baseline

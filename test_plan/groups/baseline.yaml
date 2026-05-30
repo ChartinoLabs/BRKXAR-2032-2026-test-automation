@@ -1,0 +1,30 @@
+test_case_groups:
+  version-baseline:
+    name: Version Baseline
+    tests:
+    - VERSION-HOSTNAME
+    - VERSION-IOS-VERSION
+    - VERSION-PLATFORM
+    - VERSION-SERIAL-NUMBER
+    - VERSION-UPTIME-INCREASED
+  interface-baseline:
+    name: Interface Baseline
+    tests:
+    - INTERFACE-EXISTENCE
+    - INTERFACE-ADMIN-STATUS
+    - INTERFACE-OPER-STATUS
+  ospf-neighbor-baseline:
+    name: OSPF Neighbor Baseline
+    tests:
+    - OSPF-NEIGHBOR-EXISTENCE
+    - OSPF-NEIGHBOR-STATE
+    - OSPF-NEIGHBOR-INTERFACE
+    - OSPF-NEIGHBOR-PRIORITY
+  bgp-summary-baseline:
+    name: BGP Summary Baseline
+    tests:
+    - BGP-SUMMARY-NEIGHBOR-EXISTENCE
+    - BGP-SUMMARY-NEIGHBOR-REMOTE-AS
+    - BGP-SUMMARY-NEIGHBOR-STATE
+    - BGP-SUMMARY-NEIGHBOR-PREFIXES-RCVD
+    - BGP-SUMMARY-ROUTER-ID

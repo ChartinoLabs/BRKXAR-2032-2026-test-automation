@@ -1,0 +1,21 @@
+test_cases:
+  BGP-SUMMARY-NEIGHBOR-EXISTENCE:
+    title: BGP summary neighbor existence checks
+    job: jobs/iosxe/bgp/verify_summary_neighbor_existence.py
+    tags: [bgp, existence]
+  BGP-SUMMARY-NEIGHBOR-REMOTE-AS:
+    title: BGP summary neighbor remote AS matches learned baseline
+    job: jobs/iosxe/bgp/verify_summary_neighbor_remote_as.py
+    tags: [bgp, value]
+  BGP-SUMMARY-NEIGHBOR-STATE:
+    title: BGP summary neighbor state matches learned baseline
+    job: jobs/iosxe/bgp/verify_summary_neighbor_state.py
+    tags: [bgp, value]
+  BGP-SUMMARY-NEIGHBOR-PREFIXES-RCVD:
+    title: BGP summary neighbor prefixes received matches learned baseline
+    job: jobs/iosxe/bgp/verify_summary_neighbor_prefixes_rcvd.py
+    tags: [bgp, value]
+  BGP-SUMMARY-ROUTER-ID:
+    title: BGP summary router ID matches learned baseline
+    job: jobs/iosxe/bgp/verify_summary_router_id.py
+    tags: [bgp, value]

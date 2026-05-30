@@ -1,0 +1,15 @@
+test_cases:
+  ACTION-SHUT-R1-GI2:
+    title: Shut R1 GigabitEthernet2 (R1-R2 link)
+    job: jobs/iosxe/interfaces/change_interface_admin_down.py
+    tags: [action, interface]
+    target:
+      devices:
+      - R1
+  ACTION-NORMALIZE-R1-GI2:
+    title: Normalize R1 GigabitEthernet2 (R1-R2 link)
+    job: jobs/iosxe/interfaces/change_interface_admin_up.py
+    tags: [action, interface]
+    target:
+      devices:
+      - R1
