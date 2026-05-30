@@ -1,4 +1,4 @@
-.PHONY: quality test baseline tf-init tf-plan tf-apply
+.PHONY: quality test baseline reconcile-post-shutdown tf-init tf-plan tf-apply
 
 quality:
 	uv run ruff format
@@ -10,6 +10,9 @@ test:
 
 baseline:
 	PYTHONPATH=. uv run huginn run -m learning -t testbed.yaml -p test_plan/
+
+reconcile-post-shutdown:
+	PYTHONPATH=. uv run huginn reconcile -p test_plan/ --phase post-shutdown
 
 tf-init:
 	./xeac/run_tf.sh init
