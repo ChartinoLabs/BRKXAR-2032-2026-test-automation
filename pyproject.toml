@@ -1,0 +1,21 @@
+[project]
+name = "brkxar-2032-2026-test-automation"
+version = "0.1.0"
+description = "Cisco Live 2026 BRKXAR-2032 Demo - Test Automation with Huginn and Muninn"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "huginn",
+    "muninn-parsers>=0.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.0",
+    "ruff>=0.15.12",
+    "ty>=0.0.33",
+]
+
+[tool.uv.sources]
+huginn = { path = "../../Python/Testing-as-Code/Huginn", editable = true }
+muninn-parsers = { path = "../../Python/Testing-as-Code/Muninn", editable = true }
