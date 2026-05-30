@@ -1,0 +1,15 @@
+test_cases:
+  ACTION-SHUT-TACR1-R2-LINK:
+    title: Shut TAC-R1 GigabitEthernet0/0/1 (R1-R2 link)
+    job: jobs/iosxe/interfaces/change_interface_admin_down.py
+    tags: [action, interface]
+    target:
+      devices:
+      - TAC-R1
+  ACTION-NORMALIZE-TACR1-R2-LINK:
+    title: Normalize TAC-R1 GigabitEthernet0/0/1 (R1-R2 link)
+    job: jobs/iosxe/interfaces/change_interface_admin_up.py
+    tags: [action, interface]
+    target:
+      devices:
+      - TAC-R1

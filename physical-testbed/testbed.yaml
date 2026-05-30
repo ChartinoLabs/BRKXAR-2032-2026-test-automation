@@ -1,0 +1,70 @@
+credentials:
+  default:
+    username: admin
+    password: cisco!123
+
+devices:
+  TAC-R1:
+    os: iosxe
+    groups: [routers]
+    connections:
+      ssh:
+        protocol: ssh
+        host: 10.122.104.242
+        port: 22
+        credential: default
+        auth_strict_key: false
+      netconf:
+        protocol: netconf
+        host: 10.122.104.242
+        port: 830
+        credential: default
+        auth_strict_key: false
+  TAC-R2:
+    os: iosxe
+    groups: [routers]
+    connections:
+      ssh:
+        protocol: ssh
+        host: 10.122.104.247
+        port: 22
+        credential: default
+        auth_strict_key: false
+      netconf:
+        protocol: netconf
+        host: 10.122.104.247
+        port: 830
+        credential: default
+        auth_strict_key: false
+  TAC-S1:
+    os: iosxe
+    groups: [switches]
+    connections:
+      ssh:
+        protocol: ssh
+        host: 10.122.104.250
+        port: 22
+        credential: default
+        auth_strict_key: false
+      netconf:
+        protocol: netconf
+        host: 10.122.104.250
+        port: 830
+        credential: default
+        auth_strict_key: false
+  TAC-S2:
+    os: iosxe
+    groups: [switches]
+    connections:
+      ssh:
+        protocol: ssh
+        host: 10.122.104.243
+        port: 22
+        credential: default
+        auth_strict_key: false
+      netconf:
+        protocol: netconf
+        host: 10.122.104.243
+        port: 830
+        credential: default
+        auth_strict_key: false

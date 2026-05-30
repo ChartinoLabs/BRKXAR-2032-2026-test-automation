@@ -1,0 +1,86 @@
+{
+  "devices": {
+    "TAC-R1": {
+      "values": {
+        "GigabitEthernet0/0/2": {
+          "192.0.2.3": "FULL"
+        },
+        "GigabitEthernet0/0/1": {
+          "192.0.2.2": "FULL"
+        },
+        "GigabitEthernet0/0/1.20": {
+          "203.0.113.2": "FULL"
+        },
+        "GigabitEthernet0/0/2.20": {
+          "203.0.113.3": "FULL"
+        },
+        "GigabitEthernet0/0/2.10": {
+          "198.51.100.3": "FULL"
+        },
+        "GigabitEthernet0/0/1.10": {
+          "198.51.100.2": "FULL"
+        }
+      }
+    },
+    "TAC-R2": {
+      "values": {
+        "GigabitEthernet0/0/1": {
+          "192.0.2.1": "FULL"
+        },
+        "GigabitEthernet0/0/1.20": {
+          "203.0.113.1": "FULL"
+        },
+        "GigabitEthernet0/0/2.20": {
+          "203.0.113.4": "FULL"
+        },
+        "GigabitEthernet0/0/1.10": {
+          "198.51.100.1": "FULL"
+        },
+        "GigabitEthernet0/0/2.10": {
+          "198.51.100.4": "FULL"
+        }
+      }
+    },
+    "TAC-S1": {
+      "values": {
+        "GigabitEthernet1/0/1": {
+          "192.0.2.4": "FULL"
+        },
+        "GigabitEthernet1/0/2": {
+          "192.0.2.1": "FULL"
+        },
+        "GigabitEthernet1/0/1.20": {
+          "203.0.113.4": "FULL"
+        },
+        "GigabitEthernet1/0/2.20": {
+          "203.0.113.1": "FULL"
+        },
+        "GigabitEthernet1/0/2.10": {
+          "198.51.100.1": "FULL"
+        },
+        "GigabitEthernet1/0/1.10": {
+          "198.51.100.4": "FULL"
+        }
+      }
+    },
+    "TAC-S2": {
+      "values": {
+        "FiveGigabitEthernet1/0/1": {
+          "192.0.2.3": "FULL"
+        },
+        "FiveGigabitEthernet1/0/2.20": {
+          "203.0.113.2": "FULL"
+        },
+        "FiveGigabitEthernet1/0/1.20": {
+          "203.0.113.3": "FULL"
+        },
+        "FiveGigabitEthernet1/0/2.10": {
+          "198.51.100.2": "FULL"
+        },
+        "FiveGigabitEthernet1/0/1.10": {
+          "198.51.100.3": "FULL"
+        }
+      }
+    }
+  }
+}

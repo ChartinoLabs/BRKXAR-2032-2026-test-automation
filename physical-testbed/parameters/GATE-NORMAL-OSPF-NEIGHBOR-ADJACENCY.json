@@ -1,0 +1,13 @@
+{
+  "timeout": 60,
+  "interval": 5,
+  "devices": {
+    "TAC-R1": {
+      "neighbors": {
+        "GigabitEthernet0/0/1": {
+          "192.0.2.2": "FULL"
+        }
+      }
+    }
+  }
+}

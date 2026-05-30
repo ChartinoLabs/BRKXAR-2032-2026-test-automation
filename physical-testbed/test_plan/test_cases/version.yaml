@@ -1,0 +1,21 @@
+test_cases:
+  VERSION-HOSTNAME:
+    title: System hostname matches learned baseline
+    job: jobs/iosxe/version/verify_hostname.py
+    tags: [version, value]
+  VERSION-IOS-VERSION:
+    title: IOS version matches learned baseline
+    job: jobs/iosxe/version/verify_ios_version.py
+    tags: [version, value]
+  VERSION-PLATFORM:
+    title: Platform matches learned baseline
+    job: jobs/iosxe/version/verify_platform.py
+    tags: [version, value]
+  VERSION-SERIAL-NUMBER:
+    title: Serial number matches learned baseline
+    job: jobs/iosxe/version/verify_serial_number.py
+    tags: [version, value]
+  VERSION-UPTIME-INCREASED:
+    title: Uptime has increased since learned baseline
+    job: jobs/iosxe/version/verify_uptime_increased.py
+    tags: [version, threshold]

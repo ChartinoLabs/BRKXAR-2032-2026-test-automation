@@ -1,0 +1,13 @@
+test_cases:
+  INTERFACE-EXISTENCE:
+    title: Interface existence checks
+    job: jobs/iosxe/interfaces/verify_ip_interface_brief_status.py
+    tags: [interface, existence]
+  INTERFACE-ADMIN-STATUS:
+    title: Interface admin status matches learned baseline
+    job: jobs/iosxe/interfaces/verify_ip_interface_brief_status.py
+    tags: [interface, value]
+  INTERFACE-OPER-STATUS:
+    title: Interface operational status matches learned baseline
+    job: jobs/iosxe/interfaces/verify_ip_interface_brief_status.py
+    tags: [interface, value]

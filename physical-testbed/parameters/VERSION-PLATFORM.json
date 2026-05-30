@@ -1,0 +1,16 @@
+{
+  "devices": {
+    "TAC-R1": {
+      "value": "C8300-1N1S-6T"
+    },
+    "TAC-R2": {
+      "value": "C8300-1N1S-6T"
+    },
+    "TAC-S1": {
+      "value": "C9300-48U"
+    },
+    "TAC-S2": {
+      "value": "C9300-48UN"
+    }
+  }
+}

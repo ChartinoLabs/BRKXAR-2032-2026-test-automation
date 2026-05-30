@@ -1,0 +1,16 @@
+{
+  "devices": {
+    "TAC-R1": {
+      "operator": "gte"
+    },
+    "TAC-R2": {
+      "operator": "gte"
+    },
+    "TAC-S1": {
+      "operator": "gte"
+    },
+    "TAC-S2": {
+      "operator": "gte"
+    }
+  }
+}

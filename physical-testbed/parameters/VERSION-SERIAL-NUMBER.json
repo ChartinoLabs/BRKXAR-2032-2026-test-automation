@@ -1,0 +1,16 @@
+{
+  "devices": {
+    "TAC-R1": {
+      "value": "FLM281910B8"
+    },
+    "TAC-R2": {
+      "value": "FLM27221130"
+    },
+    "TAC-S1": {
+      "value": "FCW2419C0LC"
+    },
+    "TAC-S2": {
+      "value": "FCW2243EH4W"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+test_cases:
+  GATE-R1-R2-LINK-SHUTDOWN-OSPF-NEIGHBOR-ABSENT:
+    title: OSPF neighbor R2 absent from TAC-R1 after link shutdown
+    job: jobs/iosxe/gates/gate_ospf_neighbor_absent.py
+    tags: [gate, ospf]
+    target:
+      devices:
+      - TAC-R1
+  GATE-NORMAL-OSPF-NEIGHBOR-ADJACENCY:
+    title: OSPF neighbor R2 is Full on TAC-R1 after normalize
+    job: jobs/iosxe/gates/gate_ospf_neighbor_adjacency.py
+    tags: [gate, ospf]
+    target:
+      devices:
+      - TAC-R1

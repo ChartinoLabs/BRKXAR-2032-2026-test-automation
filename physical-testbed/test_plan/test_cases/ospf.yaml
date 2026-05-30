@@ -1,0 +1,17 @@
+test_cases:
+  OSPF-NEIGHBOR-EXISTENCE:
+    title: OSPF neighbor existence checks
+    job: jobs/iosxe/ospf/verify_neighbor_existence.py
+    tags: [ospf, existence]
+  OSPF-NEIGHBOR-STATE:
+    title: OSPF neighbor state matches learned baseline
+    job: jobs/iosxe/ospf/verify_neighbor_state.py
+    tags: [ospf, value]
+  OSPF-NEIGHBOR-INTERFACE:
+    title: OSPF neighbor interface matches learned baseline
+    job: jobs/iosxe/ospf/verify_neighbor_address.py
+    tags: [ospf, value]
+  OSPF-NEIGHBOR-PRIORITY:
+    title: OSPF neighbor priority matches learned baseline
+    job: jobs/iosxe/ospf/verify_neighbor_priority.py
+    tags: [ospf, value]

@@ -1,0 +1,13 @@
+{
+  "devices": {
+    "TAC-R1": {
+      "interfaces": {
+        "GigabitEthernet0/0/1": {
+          "description": "R1 to R2 802.1Q parent",
+          "status": "up",
+          "protocol": "up"
+        }
+      }
+    }
+  }
+}

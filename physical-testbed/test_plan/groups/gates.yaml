@@ -1,0 +1,9 @@
+test_case_groups:
+  gate-r1-r2-link-shutdown:
+    name: R1-R2 Link Shutdown Convergence Gates
+    tests:
+    - GATE-R1-R2-LINK-SHUTDOWN-OSPF-NEIGHBOR-ABSENT
+  gate-normal:
+    name: Normal State Convergence Gates
+    tests:
+    - GATE-NORMAL-OSPF-NEIGHBOR-ADJACENCY

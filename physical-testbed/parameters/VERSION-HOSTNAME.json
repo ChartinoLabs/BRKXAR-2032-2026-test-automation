@@ -1,0 +1,16 @@
+{
+  "devices": {
+    "TAC-R1": {
+      "value": "TAC-R1"
+    },
+    "TAC-R2": {
+      "value": "TAC-R2"
+    },
+    "TAC-S1": {
+      "value": "TAC-S1"
+    },
+    "TAC-S2": {
+      "value": "TAC-S2"
+    }
+  }
+}
