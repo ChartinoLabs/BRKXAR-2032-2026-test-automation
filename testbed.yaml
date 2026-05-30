@@ -1,0 +1,70 @@
+credentials:
+  default:
+    username: admin
+    password: cisco!123
+
+devices:
+  R1:
+    os: iosxe
+    groups: [routers]
+    connections:
+      ssh:
+        protocol: ssh
+        host: usps-svs-cml-cluster-controller.cisco.com
+        port: 2386
+        credential: default
+        auth_strict_key: false
+      netconf:
+        protocol: netconf
+        host: usps-svs-cml-cluster-controller.cisco.com
+        port: 2396
+        credential: default
+        auth_strict_key: false
+  R2:
+    os: iosxe
+    groups: [routers]
+    connections:
+      ssh:
+        protocol: ssh
+        host: usps-svs-cml-cluster-controller.cisco.com
+        port: 2387
+        credential: default
+        auth_strict_key: false
+      netconf:
+        protocol: netconf
+        host: usps-svs-cml-cluster-controller.cisco.com
+        port: 2397
+        credential: default
+        auth_strict_key: false
+  R3:
+    os: iosxe
+    groups: [routers]
+    connections:
+      ssh:
+        protocol: ssh
+        host: usps-svs-cml-cluster-controller.cisco.com
+        port: 2388
+        credential: default
+        auth_strict_key: false
+      netconf:
+        protocol: netconf
+        host: usps-svs-cml-cluster-controller.cisco.com
+        port: 2398
+        credential: default
+        auth_strict_key: false
+  R4:
+    os: iosxe
+    groups: [routers]
+    connections:
+      ssh:
+        protocol: ssh
+        host: usps-svs-cml-cluster-controller.cisco.com
+        port: 2389
+        credential: default
+        auth_strict_key: false
+      netconf:
+        protocol: netconf
+        host: usps-svs-cml-cluster-controller.cisco.com
+        port: 2399
+        credential: default
+        auth_strict_key: false
