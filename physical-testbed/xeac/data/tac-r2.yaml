@@ -113,17 +113,14 @@ iosxe:
                 remote_as: 65000
                 update_source_interface_type: Loopback
                 update_source_interface_id: 0
-                fall_over_bfd: true
               - ip: "192.0.2.3"
                 remote_as: 65000
                 update_source_interface_type: Loopback
                 update_source_interface_id: 0
-                fall_over_bfd: true
               - ip: "192.0.2.4"
                 remote_as: 65000
                 update_source_interface_type: Loopback
                 update_source_interface_id: 0
-                fall_over_bfd: true
             address_family:
               ipv4_unicast:
                 networks:
@@ -148,21 +145,18 @@ iosxe:
                         remote_as: 65000
                         update_source_interface_type: Loopback
                         update_source_interface_id: 10
-                        fall_over_bfd: true
                         activate: true
                         send_community: both
                       - ip: "198.51.100.3"
                         remote_as: 65000
                         update_source_interface_type: Loopback
                         update_source_interface_id: 10
-                        fall_over_bfd: true
                         activate: true
                         send_community: both
                       - ip: "198.51.100.4"
                         remote_as: 65000
                         update_source_interface_type: Loopback
                         update_source_interface_id: 10
-                        fall_over_bfd: true
                         activate: true
                         send_community: both
                   - vrf: BLUE
@@ -173,21 +167,18 @@ iosxe:
                         remote_as: 65000
                         update_source_interface_type: Loopback
                         update_source_interface_id: 20
-                        fall_over_bfd: true
                         activate: true
                         send_community: both
                       - ip: "203.0.113.3"
                         remote_as: 65000
                         update_source_interface_type: Loopback
                         update_source_interface_id: 20
-                        fall_over_bfd: true
                         activate: true
                         send_community: both
                       - ip: "203.0.113.4"
                         remote_as: 65000
                         update_source_interface_type: Loopback
                         update_source_interface_id: 20
-                        fall_over_bfd: true
                         activate: true
                         send_community: both
           ospf_processes:
