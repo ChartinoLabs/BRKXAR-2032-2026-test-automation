@@ -1,0 +1,80 @@
+---
+iosxe:
+  devices:
+    - name: R1
+      host: usps-svs-cml-cluster-controller.cisco.com:2396
+      managed: true
+      protocol: netconf
+      configuration:
+        system:
+          hostname: "R1"
+        interfaces:
+          ethernets:
+            - type: GigabitEthernet
+              id: "1"
+              description: "Management"
+              shutdown: false
+            - type: GigabitEthernet
+              id: "2"
+              description: "R1 to R2"
+              shutdown: false
+              cdp: true
+              ipv4:
+                address: "10.0.12.1"
+                address_mask: "255.255.255.252"
+            - type: GigabitEthernet
+              id: "3"
+              description: "R1 to R3"
+              shutdown: false
+              cdp: true
+              ipv4:
+                address: "10.0.13.1"
+                address_mask: "255.255.255.252"
+          loopbacks:
+            - id: 0
+              description: "Router ID"
+              shutdown: false
+              ipv4:
+                address: "192.0.2.1"
+                address_mask: "255.255.255.255"
+        routing:
+          bgp:
+            as_number: 65000
+            neighbors:
+              - ip: "192.0.2.2"
+                remote_as: 65000
+                update_source_interface_type: Loopback
+                update_source_interface_id: 0
+              - ip: "192.0.2.3"
+                remote_as: 65000
+                update_source_interface_type: Loopback
+                update_source_interface_id: 0
+              - ip: "192.0.2.4"
+                remote_as: 65000
+                update_source_interface_type: Loopback
+                update_source_interface_id: 0
+            address_family:
+              ipv4_unicast:
+                networks:
+                  - network: "192.0.2.1"
+                    mask: "255.255.255.255"
+                neighbors:
+                  - ip: "192.0.2.2"
+                    activate: true
+                  - ip: "192.0.2.3"
+                    activate: true
+                  - ip: "192.0.2.4"
+                    activate: true
+          ospf_processes:
+            - id: 1
+              router_id: "192.0.2.1"
+              networks:
+                - ip: "192.0.2.1"
+                  wildcard: "0.0.0.0"
+                  area: 0
+                - ip: "10.0.12.0"
+                  wildcard: "0.0.0.3"
+                  area: 0
+                - ip: "10.0.13.0"
+                  wildcard: "0.0.0.3"
+                  area: 0
