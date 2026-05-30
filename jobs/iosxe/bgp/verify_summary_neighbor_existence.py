@@ -50,7 +50,7 @@ class VerifyBgpSummaryNeighborExistence(
         "- Parse the command output and collect current neighbor addresses.\n"
         "- Compare current neighbor set against the learned baseline.\n"
         "\n"
-        "Learned baseline targets:\n"
+        "Learned baseline targets:\n\n"
         "{% for device, device_data in parameters.devices.items() %}"
         "- {{ device }}:\n"
         "{% for neighbor in device_data.neighbors %}"

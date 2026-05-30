@@ -59,7 +59,7 @@ class GateInterfaceStatus(LearningTestCase[InterfaceGateParameters]):
         "- Parse output and compare interface status values against expected state.\n"
         "- Repeat every {interval}s until all values match or {timeout}s elapses.\n"
         "\n"
-        "Expected convergence targets:\n"
+        "Expected convergence targets:\n\n"
         "{% for device, device_data in parameters.devices.items() %}"
         "- {{ device }}:\n"
         "{% for interface, status in device_data.status.items() %}"

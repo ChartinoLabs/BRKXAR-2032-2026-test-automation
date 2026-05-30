@@ -56,7 +56,7 @@ class VerifyIpInterfaceBriefStatus(LearningTestCase[IpInterfaceBriefStatusParame
         "- Parse output and extract status value by interface.\n"
         "- Compare current status values against learned baseline.\n"
         "\n"
-        "Learned baseline targets:\n"
+        "Learned baseline targets:\n\n"
         "{% for device, device_data in parameters.devices.items() %}"
         "- {{ device }}:\n"
         "{% for interface, status_value in device_data.status.items() %}"

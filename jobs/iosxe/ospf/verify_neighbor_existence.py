@@ -49,7 +49,7 @@ class VerifyOspfNeighborExistence(LearningTestCase[OspfNeighborExistenceParamete
         "- Parse the command output and collect interface/neighbor pairs.\n"
         "- Compare current pairs against the learned baseline.\n"
         "\n"
-        "Learned baseline targets:\n"
+        "Learned baseline targets:\n\n"
         "{% for device, device_data in parameters.devices.items() %}"
         "- {{ device }}:\n"
         "{% for pair in device_data.adjacencies %}"

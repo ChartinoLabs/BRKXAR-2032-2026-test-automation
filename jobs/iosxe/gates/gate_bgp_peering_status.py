@@ -63,7 +63,7 @@ class GateBgpPeeringStatus(LearningTestCase[BgpPeeringGateParameters]):
         "- For peers expected to be in a specific state, check exact match.\n"
         "- Repeat every {interval}s until all peers match or {timeout}s elapses.\n"
         "\n"
-        "Expected convergence targets:\n"
+        "Expected convergence targets:\n\n"
         "{% for device, device_data in parameters.devices.items() %}"
         "- {{ device }}:\n"
         "{% for neighbor, state in device_data.neighbors.items() %}"

@@ -54,7 +54,7 @@ class VerifyOspfNeighborPriority(LearningTestCase[OspfNeighborPriorityParameters
         "- Parse the command output and extract `neighbors.*.*` priority.\n"
         "- Compare current values against the learned baseline.\n"
         "\n"
-        "Learned baseline targets:\n"
+        "Learned baseline targets:\n\n"
         "{% for device, device_data in parameters.devices.items() %}"
         "- {{ device }}:\n"
         "{% for key, val in device_data['values'].items() %}"

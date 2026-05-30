@@ -56,7 +56,7 @@ class VerifyBgpSummaryNeighborRemoteAs(
         "- Parse the command output and extract `neighbors.*.remote_as`.\n"
         "- Compare current values against the learned baseline.\n"
         "\n"
-        "Learned baseline targets:\n"
+        "Learned baseline targets:\n\n"
         "{% for device, device_data in parameters.devices.items() %}"
         "- {{ device }}:\n"
         "{% for neighbor, val in device_data['values'].items() %}"

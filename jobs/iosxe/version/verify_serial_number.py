@@ -51,7 +51,7 @@ class VerifyVersionSerialNumber(LearningTestCase[VersionSerialNumberParameters])
         "- Parse the command output and extract `serial_number`.\n"
         "- Compare current value against the learned baseline.\n"
         "\n"
-        "Learned baseline targets:\n"
+        "Learned baseline targets:\n\n"
         "{% for device, device_data in parameters.devices.items() %}"
         "- {{ device }}: expected value={{ device_data.value }}\n"
         "{% endfor %}"
