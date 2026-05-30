@@ -17,5 +17,5 @@ dev = [
 ]
 
 [tool.uv.sources]
-huginn = { path = "../../Python/Testing-as-Code/Huginn", editable = true }
-muninn-parsers = { path = "../../Python/Testing-as-Code/Muninn", editable = true }
+huginn = { git = "https://github.com/ChartinoLabs/Huginn.git" }
+muninn-parsers = { git = "https://github.com/ChartinoLabs/Muninn.git" }
