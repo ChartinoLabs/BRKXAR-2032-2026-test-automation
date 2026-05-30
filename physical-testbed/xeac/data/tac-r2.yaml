@@ -1,0 +1,234 @@
+---
+iosxe:
+  devices:
+    - name: TAC-R2
+      host: 10.122.104.247:830
+      managed: true
+      protocol: netconf
+      templates:
+        - baseline-c8300
+        - red-blue-vrfs
+      configuration:
+        system:
+          hostname: "TAC-R2"
+        interfaces:
+          ethernets:
+            - type: GigabitEthernet
+              id: "0/0/0"
+              shutdown: false
+              vrf_forwarding: Mgmt-intf
+              ipv4:
+                address: "10.122.104.247"
+                address_mask: "255.255.255.0"
+            - type: GigabitEthernet
+              id: "0/0/1"
+              description: "R2 to R1 802.1Q parent"
+              shutdown: false
+              cdp: true
+              bfd:
+                enable: true
+              ipv4:
+                address: "10.0.1.2"
+                address_mask: "255.255.255.252"
+            - type: GigabitEthernet
+              id: "0/0/2"
+              description: "R2 to S2 802.1Q parent"
+              shutdown: false
+              cdp: true
+              bfd:
+                enable: true
+              ipv4:
+                address: "10.0.4.1"
+                address_mask: "255.255.255.252"
+            - type: GigabitEthernet
+              id: "0/0/1.10"
+              description: "RED R2-R1"
+              shutdown: false
+              encapsulation_dot1q_vlan_id: 10
+              vrf_forwarding: RED
+              bfd:
+                enable: true
+              ipv4:
+                address: "10.10.1.2"
+                address_mask: "255.255.255.252"
+            - type: GigabitEthernet
+              id: "0/0/1.20"
+              description: "BLUE R2-R1"
+              shutdown: false
+              encapsulation_dot1q_vlan_id: 20
+              vrf_forwarding: BLUE
+              bfd:
+                enable: true
+              ipv4:
+                address: "10.20.1.2"
+                address_mask: "255.255.255.252"
+            - type: GigabitEthernet
+              id: "0/0/2.10"
+              description: "RED R2-S2"
+              shutdown: false
+              encapsulation_dot1q_vlan_id: 10
+              vrf_forwarding: RED
+              bfd:
+                enable: true
+              ipv4:
+                address: "10.10.4.1"
+                address_mask: "255.255.255.252"
+            - type: GigabitEthernet
+              id: "0/0/2.20"
+              description: "BLUE R2-S2"
+              shutdown: false
+              encapsulation_dot1q_vlan_id: 20
+              vrf_forwarding: BLUE
+              bfd:
+                enable: true
+              ipv4:
+                address: "10.20.4.1"
+                address_mask: "255.255.255.252"
+          loopbacks:
+            - id: 0
+              description: "Router ID"
+              shutdown: false
+              ipv4:
+                address: "192.0.2.2"
+                address_mask: "255.255.255.255"
+            - id: 10
+              description: "RED Router ID"
+              shutdown: false
+              vrf_forwarding: RED
+              ipv4:
+                address: "198.51.100.2"
+                address_mask: "255.255.255.255"
+            - id: 20
+              description: "BLUE Router ID"
+              shutdown: false
+              vrf_forwarding: BLUE
+              ipv4:
+                address: "203.0.113.2"
+                address_mask: "255.255.255.255"
+        routing:
+          bgp:
+            as_number: 65000
+            neighbors:
+              - ip: "192.0.2.1"
+                remote_as: 65000
+                update_source_interface_type: Loopback
+                update_source_interface_id: 0
+                fall_over_bfd: true
+              - ip: "192.0.2.3"
+                remote_as: 65000
+                update_source_interface_type: Loopback
+                update_source_interface_id: 0
+                fall_over_bfd: true
+              - ip: "192.0.2.4"
+                remote_as: 65000
+                update_source_interface_type: Loopback
+                update_source_interface_id: 0
+                fall_over_bfd: true
+            address_family:
+              ipv4_unicast:
+                networks:
+                  - network: "192.0.2.2"
+                    mask: "255.255.255.255"
+                neighbors:
+                  - ip: "192.0.2.1"
+                    activate: true
+                    send_community: both
+                  - ip: "192.0.2.3"
+                    activate: true
+                    send_community: both
+                  - ip: "192.0.2.4"
+                    activate: true
+                    send_community: both
+                vrfs:
+                  - vrf: RED
+                    redistribute:
+                      connected: true
+                    neighbors:
+                      - ip: "198.51.100.1"
+                        remote_as: 65000
+                        update_source_interface_type: Loopback
+                        update_source_interface_id: 10
+                        fall_over_bfd: true
+                        activate: true
+                        send_community: both
+                      - ip: "198.51.100.3"
+                        remote_as: 65000
+                        update_source_interface_type: Loopback
+                        update_source_interface_id: 10
+                        fall_over_bfd: true
+                        activate: true
+                        send_community: both
+                      - ip: "198.51.100.4"
+                        remote_as: 65000
+                        update_source_interface_type: Loopback
+                        update_source_interface_id: 10
+                        fall_over_bfd: true
+                        activate: true
+                        send_community: both
+                  - vrf: BLUE
+                    redistribute:
+                      connected: true
+                    neighbors:
+                      - ip: "203.0.113.1"
+                        remote_as: 65000
+                        update_source_interface_type: Loopback
+                        update_source_interface_id: 20
+                        fall_over_bfd: true
+                        activate: true
+                        send_community: both
+                      - ip: "203.0.113.3"
+                        remote_as: 65000
+                        update_source_interface_type: Loopback
+                        update_source_interface_id: 20
+                        fall_over_bfd: true
+                        activate: true
+                        send_community: both
+                      - ip: "203.0.113.4"
+                        remote_as: 65000
+                        update_source_interface_type: Loopback
+                        update_source_interface_id: 20
+                        fall_over_bfd: true
+                        activate: true
+                        send_community: both
+          ospf_processes:
+            - id: 1
+              router_id: "192.0.2.2"
+              bfd_all_interfaces: true
+              networks:
+                - ip: "192.0.2.2"
+                  wildcard: "0.0.0.0"
+                  area: 0
+                - ip: "10.0.1.0"
+                  wildcard: "0.0.0.3"
+                  area: 0
+                - ip: "10.0.4.0"
+                  wildcard: "0.0.0.3"
+                  area: 0
+            - id: 10
+              vrf: RED
+              router_id: "198.51.100.2"
+              bfd_all_interfaces: true
+              networks:
+                - ip: "198.51.100.2"
+                  wildcard: "0.0.0.0"
+                  area: 0
+                - ip: "10.10.1.0"
+                  wildcard: "0.0.0.3"
+                  area: 0
+                - ip: "10.10.4.0"
+                  wildcard: "0.0.0.3"
+                  area: 0
+            - id: 20
+              vrf: BLUE
+              router_id: "203.0.113.2"
+              bfd_all_interfaces: true
+              networks:
+                - ip: "203.0.113.2"
+                  wildcard: "0.0.0.0"
+                  area: 0
+                - ip: "10.20.1.0"
+                  wildcard: "0.0.0.3"
+                  area: 0
+                - ip: "10.20.4.0"
+                  wildcard: "0.0.0.3"
+                  area: 0

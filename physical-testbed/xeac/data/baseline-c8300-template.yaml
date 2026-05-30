@@ -1,0 +1,73 @@
+---
+iosxe:
+  templates:
+    - name: baseline-c8300
+      type: model
+      configuration:
+        system:
+          ip_domain_name: "chrisjhart.net"
+          ip_domain_lookup_vrfs:
+            - vrf: Mgmt-intf
+              source_interface_type: GigabitEthernet
+              source_interface_id: "0/0/0"
+          ip_name_servers_vrf:
+            - vrf: Mgmt-intf
+              servers:
+                - "64.102.6.247"
+                - "173.37.87.157"
+          enable_secret_type: "0"
+          enable_secret: "cisco!123"
+          ip_scp_server_enable: true
+          ssh:
+            version: "2"
+        service:
+          timestamps:
+            debug: true
+            debug_datetime: true
+            debug_datetime_msec: true
+            debug_datetime_year: true
+            log: true
+            log_datetime: true
+            log_datetime_msec: true
+            log_datetime_year: true
+        cdp:
+          run: true
+        lldp:
+          run: true
+        aaa:
+          new_model: true
+          usernames:
+            - name: admin
+              privilege: 15
+              password_encryption: "0"
+              password: "cisco!123"
+        ntp:
+          servers:
+            - ip: "10.101.217.202"
+              vrf: Mgmt-intf
+        vrfs:
+          - name: Mgmt-intf
+            address_family_ipv4:
+              enable: true
+        routing:
+          static_routes:
+            - prefix: "0.0.0.0"
+              mask: "0.0.0.0"
+              vrf: Mgmt-intf
+              next_hops:
+                - ip: "10.122.104.1"
+        line:
+          consoles:
+            - number: 0
+              exec_timeout_minutes: 0
+              exec_timeout_seconds: 0
+              privilege_level: 15
+              logging_synchronous: true
+          vtys:
+            - number_from: 0
+              number_to: 15
+              exec_timeout_minutes: 0
+              exec_timeout_seconds: 0
+              logging_synchronous: true
+              transport_input:
+                - ssh

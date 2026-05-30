@@ -1,0 +1,15 @@
+---
+iosxe:
+  templates:
+    - name: red-blue-vrfs
+      type: model
+      configuration:
+        vrfs:
+          - name: RED
+            route_distinguisher: "65000:100"
+            address_family_ipv4:
+              enable: true
+          - name: BLUE
+            route_distinguisher: "65000:200"
+            address_family_ipv4:
+              enable: true
