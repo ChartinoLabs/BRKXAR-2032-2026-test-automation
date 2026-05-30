@@ -1,0 +1,68 @@
+{
+  "devices": {
+    "TAC-R1": {
+      "adjacencies": {
+        "GigabitEthernet0/0/2": {
+          "192.0.2.3": "__exists__"
+        },
+        "GigabitEthernet0/0/2.20": {
+          "203.0.113.3": "__exists__"
+        },
+        "GigabitEthernet0/0/2.10": {
+          "198.51.100.3": "__exists__"
+        }
+      }
+    },
+    "TAC-R2": {
+      "adjacencies": {
+        "GigabitEthernet0/0/2.20": {
+          "203.0.113.4": "__exists__"
+        },
+        "GigabitEthernet0/0/2.10": {
+          "198.51.100.4": "__exists__"
+        }
+      }
+    },
+    "TAC-S1": {
+      "adjacencies": {
+        "GigabitEthernet1/0/1": {
+          "192.0.2.4": "__exists__"
+        },
+        "GigabitEthernet1/0/2": {
+          "192.0.2.1": "__exists__"
+        },
+        "GigabitEthernet1/0/1.20": {
+          "203.0.113.4": "__exists__"
+        },
+        "GigabitEthernet1/0/2.20": {
+          "203.0.113.1": "__exists__"
+        },
+        "GigabitEthernet1/0/2.10": {
+          "198.51.100.1": "__exists__"
+        },
+        "GigabitEthernet1/0/1.10": {
+          "198.51.100.4": "__exists__"
+        }
+      }
+    },
+    "TAC-S2": {
+      "adjacencies": {
+        "FiveGigabitEthernet1/0/1": {
+          "192.0.2.3": "__exists__"
+        },
+        "FiveGigabitEthernet1/0/2.20": {
+          "203.0.113.2": "__exists__"
+        },
+        "FiveGigabitEthernet1/0/1.20": {
+          "203.0.113.3": "__exists__"
+        },
+        "FiveGigabitEthernet1/0/2.10": {
+          "198.51.100.2": "__exists__"
+        },
+        "FiveGigabitEthernet1/0/1.10": {
+          "198.51.100.3": "__exists__"
+        }
+      }
+    }
+  }
+}

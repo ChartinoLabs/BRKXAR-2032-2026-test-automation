@@ -7,3 +7,4 @@ test_case_groups:
     name: Normal State Convergence Gates
     tests:
     - GATE-NORMAL-OSPF-NEIGHBOR-ADJACENCY
+    - GATE-NORMAL-BGP-PEERING

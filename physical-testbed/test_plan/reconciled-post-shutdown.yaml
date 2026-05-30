@@ -1,5 +1,39 @@
-test_cases: {}
+test_cases:
+  OSPF-NEIGHBOR-EXISTENCE-post-shutdown:
+    title: OSPF neighbor existence checks (post-shutdown)
+    job: jobs/iosxe/ospf/verify_neighbor_existence.py
+    tags:
+    - ospf
+    - existence
+  OSPF-NEIGHBOR-STATE-post-shutdown:
+    title: OSPF neighbor state matches learned baseline (post-shutdown)
+    job: jobs/iosxe/ospf/verify_neighbor_state.py
+    tags:
+    - ospf
+    - value
+  OSPF-NEIGHBOR-INTERFACE-post-shutdown:
+    title: OSPF neighbor interface matches learned baseline (post-shutdown)
+    job: jobs/iosxe/ospf/verify_neighbor_address.py
+    tags:
+    - ospf
+    - value
+  OSPF-NEIGHBOR-PRIORITY-post-shutdown:
+    title: OSPF neighbor priority matches learned baseline (post-shutdown)
+    job: jobs/iosxe/ospf/verify_neighbor_priority.py
+    tags:
+    - ospf
+    - value
 test_case_groups:
   ospf-neighbor-baseline-post-shutdown:
     groups:
     - ospf-neighbor-baseline
+    exclude_tests:
+    - OSPF-NEIGHBOR-EXISTENCE
+    - OSPF-NEIGHBOR-INTERFACE
+    - OSPF-NEIGHBOR-STATE
+    - OSPF-NEIGHBOR-PRIORITY
+    tests:
+    - OSPF-NEIGHBOR-EXISTENCE-post-shutdown
+    - OSPF-NEIGHBOR-INTERFACE-post-shutdown
+    - OSPF-NEIGHBOR-STATE-post-shutdown
+    - OSPF-NEIGHBOR-PRIORITY-post-shutdown

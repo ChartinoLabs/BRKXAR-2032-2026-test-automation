@@ -26,7 +26,6 @@ scenarios:
         depends_on:
         - gate-post-shutdown
         test_case_groups:
-        - bgp-summary-baseline
         - ospf-neighbor-baseline-post-shutdown
       normalize:
         name: Normalize TAC-R1 GigabitEthernet0/0/1 (R1-R2 link)

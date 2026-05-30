@@ -13,3 +13,13 @@ test_cases:
     target:
       devices:
       - TAC-R1
+  GATE-NORMAL-BGP-PEERING:
+    title: BGP peering fully established after normalize
+    job: jobs/iosxe/gates/gate_bgp_peering_status.py
+    tags: [gate, bgp]
+    target:
+      devices:
+      - TAC-R1
+      - TAC-R2
+      - TAC-S1
+      - TAC-S2
