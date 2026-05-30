@@ -8,9 +8,10 @@ reports/
 huginn.log
 .pytest_cache/
 
-xeac/.env
-xeac/.terraform/
-xeac/terraform.tfstate
-xeac/terraform.tfstate.backup
-xeac/*.tfplan
-xeac/.terraform.lock.hcl
+.env
+**/xeac/.env
+**/xeac/.terraform/
+**/xeac/terraform.tfstate
+**/xeac/terraform.tfstate.backup
+**/xeac/*.tfplan
+**/xeac/.terraform.lock.hcl
