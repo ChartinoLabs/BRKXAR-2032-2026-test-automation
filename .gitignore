@@ -15,3 +15,4 @@ huginn.log
 **/xeac/terraform.tfstate.backup
 **/xeac/*.tfplan
 **/xeac/.terraform.lock.hcl
+workspace-backup/
