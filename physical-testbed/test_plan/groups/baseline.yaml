@@ -1,4 +1,11 @@
 test_case_groups:
+  baseline:
+    name: Full Baseline
+    groups:
+    - version-baseline
+    - bgp-summary-baseline
+    - ospf-neighbor-baseline
+    - interface-baseline
   version-baseline:
     name: Version Baseline
     tests:

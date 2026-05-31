@@ -5,47 +5,40 @@ scenarios:
       pre-change:
         name: Pre-Change Baseline
         test_case_groups:
-        - version-baseline
-        - bgp-summary-baseline
-        - ospf-neighbor-baseline
-        - interface-baseline
+        - baseline
       shutdown:
         name: Shut TAC-R1 GigabitEthernet0/0/1 (R1-R2 link)
         depends_on:
         - pre-change
         test_case_groups:
-        - action-shut-r1r2
+        - shut
       gate-post-shutdown:
         name: Post-Shutdown Convergence Gate
         depends_on:
         - shutdown
         test_case_groups:
-        - gate-r1-r2-link-shutdown
+        - gate-post-shutdown
       post-shutdown:
         name: Post-Shutdown Verification
         depends_on:
         - gate-post-shutdown
         test_case_groups:
-        - bgp-summary-baseline
-        - ospf-neighbor-baseline-post-shutdown
+        - post-shutdown
       normalize:
         name: Normalize TAC-R1 GigabitEthernet0/0/1 (R1-R2 link)
         depends_on:
         - post-shutdown
         test_case_groups:
-        - action-normalize-r1r2
+        - normalize
       gate-post-normalize:
         name: Post-Normalize Convergence Gate
         depends_on:
         - normalize
         test_case_groups:
-        - gate-normal
+        - gate-post-normalize
       post-normalize:
         name: Post-Normalize Verification
         depends_on:
         - gate-post-normalize
         test_case_groups:
-        - version-baseline
-        - bgp-summary-baseline
-        - ospf-neighbor-baseline
-        - interface-baseline
+        - baseline

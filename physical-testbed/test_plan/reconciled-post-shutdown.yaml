@@ -23,7 +23,32 @@ test_cases:
     tags:
     - ospf
     - value
+  INTERFACE-EXISTENCE-post-shutdown:
+    title: Interface existence checks (post-shutdown)
+    job: jobs/iosxe/interfaces/verify_ip_interface_brief_status.py
+    tags:
+    - interface
+    - existence
+  INTERFACE-ADMIN-STATUS-post-shutdown:
+    title: Interface admin status matches learned baseline (post-shutdown)
+    job: jobs/iosxe/interfaces/verify_ip_interface_brief_status.py
+    tags:
+    - interface
+    - value
+  INTERFACE-OPER-STATUS-post-shutdown:
+    title: Interface operational status matches learned baseline (post-shutdown)
+    job: jobs/iosxe/interfaces/verify_ip_interface_brief_status.py
+    tags:
+    - interface
+    - value
 test_case_groups:
+  post-shutdown:
+    name: Post-Shutdown Verification
+    groups:
+    - version-baseline
+    - bgp-summary-baseline
+    - ospf-neighbor-baseline-post-shutdown
+    - interface-baseline-post-shutdown
   ospf-neighbor-baseline-post-shutdown:
     groups:
     - ospf-neighbor-baseline
@@ -37,3 +62,14 @@ test_case_groups:
     - OSPF-NEIGHBOR-INTERFACE-post-shutdown
     - OSPF-NEIGHBOR-STATE-post-shutdown
     - OSPF-NEIGHBOR-PRIORITY-post-shutdown
+  interface-baseline-post-shutdown:
+    groups:
+    - interface-baseline
+    exclude_tests:
+    - INTERFACE-OPER-STATUS
+    - INTERFACE-EXISTENCE
+    - INTERFACE-ADMIN-STATUS
+    tests:
+    - INTERFACE-OPER-STATUS-post-shutdown
+    - INTERFACE-EXISTENCE-post-shutdown
+    - INTERFACE-ADMIN-STATUS-post-shutdown

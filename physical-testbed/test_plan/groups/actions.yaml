@@ -1,7 +1,7 @@
 test_case_groups:
-  action-shut-r1r2:
+  shut:
     tests:
     - ACTION-SHUT-TACR1-R2-LINK
-  action-normalize-r1r2:
+  normalize:
     tests:
     - ACTION-NORMALIZE-TACR1-R2-LINK

@@ -1,9 +1,10 @@
 test_case_groups:
-  gate-r1-r2-link-shutdown:
-    name: R1-R2 Link Shutdown Convergence Gates
+  gate-post-shutdown:
+    name: Post-Shutdown Convergence Gate
     tests:
     - GATE-R1-R2-LINK-SHUTDOWN-OSPF-NEIGHBOR-ABSENT
-  gate-normal:
-    name: Normal State Convergence Gates
+  gate-post-normalize:
+    name: Post-Normalize Convergence Gate
     tests:
     - GATE-NORMAL-OSPF-NEIGHBOR-ADJACENCY
+    - GATE-NORMAL-BGP-PEERING
