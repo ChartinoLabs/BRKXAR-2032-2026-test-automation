@@ -3,7 +3,8 @@
 ENV ?= virtual-cml-testbed
 SCENARIO ?= link-shutdown-r1r2
 
-.PHONY: quality test baseline learn-pre-change reconcile-post-shutdown \
+.PHONY: quality test baseline learn-pre-change learn-post-shutdown \
+	reconcile-post-shutdown clean-parameters \
 	pre-change shutdown post-shutdown normalize post-normalize \
 	tf-init tf-plan tf-apply
 
@@ -65,6 +66,10 @@ post-normalize:
 		-p $(ENV)/test_plan/ \
 		--parameters-dir $(ENV)/parameters/ \
 		--scenario $(SCENARIO) --phase post-normalize
+
+clean-parameters:
+	find $(ENV)/parameters/ -name '*.json' \
+		! -name 'ACTION-*' ! -name 'GATE-*' -delete
 
 learn-post-shutdown:
 	PYTHONPATH=. uv run huginn run -m learning \
