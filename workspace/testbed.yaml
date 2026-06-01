@@ -1,0 +1,362 @@
+---
+testbed:
+  credentials:
+    default:
+      username: admin
+      password: cisco!123
+devices:
+  iosxe-r1:
+    os: iosxe
+    type: router
+    credentials:
+      default:
+        username: admin
+        password: cisco!123
+      aaa:
+        username: cisco
+        password: cisco!123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: ssh
+      console:
+        ip: usps-svs-cml-cluster-controller.cisco.com
+        port: 2002
+        login_creds: local
+      ssh:
+        protocol: ssh
+        ip: 9.1.50.6
+        port: 22
+      restconf:
+        ip: 9.1.50.6
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: cisco!123
+      netconf:
+        ip: 9.1.50.6
+        port: 830
+        protocol: netconf
+        verify: False
+        username: admin
+        password: cisco!123
+    custom:
+      platform:
+        - iosxe
+        - ios
+        - csr1000v
+  REAL-APIC:
+    credentials:
+      default:
+        username: admin
+        password: cisco!123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: ssh
+      rest:
+        ip: 10.81.239.51
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: cisco!123
+    type: aci
+    os: linux
+    custom:
+      platform:
+        - APIC
+        - apic
+  DNAC:
+    credentials:
+      default:
+        username: devnetuser
+        password: Cisco123!
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: maglev
+      rest:
+        ip: sandboxdnac.cisco.com
+        port: 443
+        protocol: https
+        verify: False
+        username: devnetuser
+        password: Cisco123!
+    type: server
+    os: linux
+    custom:
+      platform:
+        - DNAC
+  iosxe-r2:
+    os: iosxe
+    type: router
+    credentials:
+      default:
+        username: admin
+        password: cisco!123
+      aaa:
+        username: cisco
+        password: cisco!123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: ssh
+      console:
+        ip: usps-svs-cml-cluster-controller.cisco.com
+        port: 2005
+        login_creds: local
+      ssh:
+        protocol: ssh
+        ip: 9.1.50.9
+        port: 22
+      restconf:
+        ip: 9.1.50.9
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: cisco!123
+      netconf:
+        ip: 9.1.50.9
+        port: 830
+        protocol: netconf
+        verify: False
+        username: admin
+        password: cisco!123
+    custom:
+      platform:
+        - iosxe
+        - ios
+        - csr1000v
+  iosxr-r1:
+    os: iosxr
+    type: router
+    credentials:
+      default:
+        username: admin
+        password: cisco!123
+      aaa:
+        username: cisco
+        password: cisco!123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: ssh
+      console:
+        ip: usps-svs-cml-cluster-controller.cisco.com
+        port: 2003
+        login_creds: local
+      ssh:
+        protocol: ssh
+        ip: 9.1.50.7
+        port: 22
+      restconf:
+        ip: 9.1.50.7
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: cisco!123
+      netconf:
+        ip: 9.1.50.7
+        port: 830
+        protocol: netconf
+        verify: False
+        username: admin
+        password: cisco!123
+      gnmi:
+        ip: 9.1.50.7
+        port: 57400
+        protocol: gnmi
+        verify: False
+        username: admin
+        password: cisco!123
+    custom:
+      platform:
+        - ios-xr
+        - ios-xrv
+        - ios-xrv9k
+        - xr9kv
+        - iosxrv9000
+        - iosxrv
+  iosxr-r2:
+    os: iosxr
+    type: router
+    credentials:
+      default:
+        username: admin
+        password: cisco!123
+      aaa:
+        username: cisco
+        password: cisco!123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: ssh
+      console:
+        ip: usps-svs-cml-cluster-controller.cisco.com
+        port: 2004
+        login_creds: local
+      ssh:
+        protocol: ssh
+        ip: 9.1.50.8
+        port: 22
+      restconf:
+        ip: 9.1.50.8
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: cisco!123
+      netconf:
+        ip: 9.1.50.8
+        port: 830
+        protocol: netconf
+        verify: False
+        username: admin
+        password: cisco!123
+      gnmi:
+        ip: 9.1.50.8
+        port: 57400
+        protocol: gnmi
+        verify: False
+        username: admin
+        password: cisco!123
+    custom:
+      platform:
+        - ios-xr
+        - ios-xrv
+        - ios-xrv9k
+        - xr9kv
+        - iosxrv9000
+        - iosxrv
+  nxos-sw1:
+    os: nxos
+    type: router
+    credentials:
+      default:
+        username: cisco
+        password: cisco!123
+      aaa:
+        username: cisco
+        password: cisco!123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: ssh
+      console:
+        ip: usps-svs-cml-cluster-controller.cisco.com
+        port: 2001
+        login_creds: local
+      ssh:
+        protocol: ssh
+        ip: 9.1.50.5
+        port: 22
+      rest:
+        ip: 9.1.50.5
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: Admin_1234!
+      restconf:
+        ip: 9.1.50.5
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: cisco!123
+      netconf:
+        ip: 9.1.50.5
+        port: 830
+        protocol: netconf
+        verify: False
+        username: admin
+        password: cisco!123
+      gnmi:
+        ip: 9.1.50.5
+        port: 50051
+        protocol: gnmi
+        verify: False
+        username: admin
+        password: cisco!123
+      nxapi:
+        ip: 9.1.50.5
+        port: 80
+        protocol: http
+        verify: False
+        username: admin
+        password: cisco!123
+    custom:
+      platform:
+        - nxosv
+        - nxosv9k
+        - nxosv9kv
+        - nxosv9k
+        - nexus
+  nxos-sw2:
+    os: nxos
+    type: router
+    credentials:
+      default:
+        username: cisco
+        password: cisco!123
+      aaa:
+        username: cisco
+        password: cisco!123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: ssh
+      console:
+        ip: usps-svs-cml-cluster-controller.cisco.com
+        port: 2006
+        login_creds: local
+      ssh:
+        protocol: ssh
+        ip: 9.1.50.10
+        port: 22
+      rest:
+        ip: 9.1.50.10
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: Admin_1234!
+      restconf:
+        ip: 9.1.50.10
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: cisco!123
+      netconf:
+        ip: 9.1.50.10
+        port: 830
+        protocol: netconf
+        verify: False
+        username: admin
+        password: cisco!123
+      gnmi:
+        ip: 9.1.50.10
+        port: 50051
+        protocol: gnmi
+        verify: False
+        username: admin
+        password: cisco!123
+      nxapi:
+        ip: 9.1.50.10
+        port: 80
+        protocol: http
+        verify: False
+        username: admin
+        password: cisco!123
+    custom:
+      platform:
+        - nxosv
+        - nxosv9k
+        - nxosv9kv
+        - nxosv9k
+        - nexus

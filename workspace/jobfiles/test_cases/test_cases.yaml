@@ -1,0 +1,30 @@
+test_cases:
+  - title: '[IOS-XE] Verify EIGRP Neighbor Adjacencies'
+    purpose: |
+      The purpose of this test case is to verify the EIGRP Neighbor Adjacencies on the device. The eigrp instance > vrf > address_family > eigrp_interface > eigrp_nbr IP attribute (no other attributes) should match the expected values from the jobfile parameters.
+    labels: []
+    commands:
+      - command: show vrf
+      - command: show ip eigrp vrf RED neighbors
+  - title: '[NX-OS] Verify VLAN Name'
+    purpose: This test case validates that the VLAN Name (vlanshowbr-vlanname) tied to any given VLAN ID ((vlanshowbr-vlanid)), is as expected, assuming the VLAN was named.
+    labels: []
+    commands:
+      - command: show vlan brief
+  - title: '[IOS-XR] Verify IS-IS Interface Circuit Type'
+    purpose: The goal of this test case is to verify the IS-IS Interface Circuit Type on the device. The parsed data values for the interface and its circuit type should match the expected values from the learned parameters (Gather Parameters keyword) in the 'DUTS' dictionary that adhere to the schema provided.
+    labels: []
+    commands:
+      - command: show isis interface
+  - title: '[IOS-XR] Verify VRF IPv4 Interfaces'
+    purpose: The goal of this test case is to verify the VRF IPv4 Interfaces on the device. The parsed data values for the interface and its circuit type should match the expected values from the learned parameters (Gather Parameters keyword) in the 'DUTS' dictionary that adhere to the schema provided.
+    labels: []
+    commands:
+      - command: show vrf all
+      - command: show ipv4 vrf RED interface
+  - title: '[DNAC] Verify DNAC Network Devices List'
+    purpose: For every device in the response, verify that the device's serialNumber matches the expected serialNumber for that device (use the hostname as the device_name). If the serialNumber does not match the expected serialNumber, the test case should fail.
+    labels: []
+    commands:
+      - command: /dna/intent/api/v1/network-device
+        api: true
