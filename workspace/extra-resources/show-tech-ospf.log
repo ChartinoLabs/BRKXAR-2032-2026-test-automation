@@ -1,0 +1,366 @@
+show clock
+show version
+show running-config
+show ip ospf 
+show ip ospf interface
+show ip ospf neighbor
+show ip ospf neighbor detail
+show ip ospf max-metric
+show ip ospf multi-area
+show ip ospf border-routers detail
+show ip ospf fast-reroute
+show ip ospf fast-reroute prefix-summary
+show ip ospf neighbor fast-reroute
+show ip ospf fast-reroute remote-lfa tunnels internal
+show ip ospf fast-reroute ti-lfa
+show ip ospf fast-reroute ti-lfa tunnels
+show ip ospf fast-reroute ti-lfa tunnels internal all
+show ip ospf summary-address
+show ip ospf virtual-links
+show ip ospf statistic detail
+show ip ospf topology-info
+show ip ospf traffic
+show ip ospf rib detail
+show ip ospf rib redistribution detail
+show ip route summary
+show ip route ospf
+show interfaces
+show ip ospf flood-list
+show ip ospf request-list
+show ip ospf retransmission-list
+show ip ospf segment-routing
+show ip ospf segment-routing global-block
+show ip ospf segment-routing local-block
+show ip ospf segment-routing local-prefix
+show ip ospf segment-routing mapping-server
+show ip ospf segment-routing adjacency-sid
+show ip ospf segment-routing adjacency-sid detail
+show ip ospf segment-routing sid-database internal
+show ip ospf segment-routing conflicts
+show segment-routing mpls connected-prefix-sid-map ipv4
+show segment-routing mpls connected-prefix-sid-map protocol backup ipv4
+show segment-routing mpls mapping-server ipv4
+show segment-routing mpls mapping-server remote backup ipv4
+show mpls traffic-eng segment-routing ospf
+show mpls traffic-eng segment-routing prefix
+show ip ospf segment-routing microloop-avoidance
+show ip ospf segment-routing microloop-avoidance tunnels
+show ip ospf segment-routing microloop-avoidance tunnels internal all
+show ip ospf database dist-ls-pending
+show ip ospf ls-distribution
+show ip ospf database database-summary
+show ip ospf database
+show ip ospf database router
+show ip ospf database network
+show ip ospf database summary
+show ip ospf database external
+show ip ospf database asbr-summary
+show ip ospf database nssa-external
+show ip ospf database opaque-area
+show ip ospf database opaque-as
+show ip ospf database opaque-link
+show ip ospf mpls ldp interface
+show ip ospf mpls traffic-eng fragment
+show ip ospf mpls traffic-eng link
+show ip ospf nsf
+show ip ospf nsr
+show ip ospf sham-links
+show ip ospf timers rate-limit
+show ip ospf timers lsa-group
+show ip ospf events
+show ip route vrf RED summary
+show ip route vrf RED ospf
+show clock
+show version
+show running-config
+show redundancy history
+show redundancy states
+show redundancy switchover history
+show stacks
+show interfaces
+show interfaces history
+show controllers
+show user
+show data-corruption
+show file systems
+show file descriptors
+show bootflash: all
+show webui: all
+show memory statistics
+show process memory sorted
+show process memory platform sorted
+show process cpu sorted
+show process cpu platform sorted
+show process cpu extended history
+show process cpu history
+show controllers t1
+show controllers e1
+show platform software system all
+show platform hardware throughput level
+show platform software vnic-if interface-mapping
+show platform software vmemory info
+show ipc nodes
+show ipc ports
+show ipc queue
+show ipc status
+show cdp neighbor
+show cdp neighbor detail
+show subscriber statistics
+show ip subscriber statistics errors
+show ip subscriber statistics dangling
+show pppoe statistics
+show pppoe summary
+show ppp statistics
+show ppp subscriber statistics
+show ppp summary
+show l2tp counters component errors
+show l2tp counters session fsm event icrq
+show l2tp counters session fsm event ocrq
+show l2tp counters session fsm event manual
+show l2tp counters session fsm state current icrq
+show l2tp counters session fsm state current manual
+show l2tp counters session fsm state current ocrq
+show l2tp counters session fsm state transition icrq
+show l2tp counters session fsm state transition ocrq
+show l2tp counters session fsm state transition manual
+show vpdn statistics call fsm
+show vpdn statistics mgr fsm
+show vpdn session stats pending
+show dapr route-manager summary
+show dapr route-manager border-router summary
+show dapr route-manager border-router neighbors
+show dapr route-manager link-groups
+show dapr route-manager route-table
+show dapr border-router summary
+show dapr border-router interfaces
+show dapr border-router neighbors
+show ip nbar version
+show ip nbar control-plane
+show crypto tls-tunnel stats
+show crypto tls-tunnel sessions
+show crypto ssl stats
+show crypto ssl stats tunnel
+show platform hardware qfp active feature alg memory
+show platform hardware qfp active feature td datapath memory
+show platform hardware qfp active feature alg statistics
+show platform hardware qfp standby feature alg memory
+show platform hardware qfp standby feature td datapath memory
+show platform hardware qfp standby feature alg statistics
+show raw reclaimed
+show crypto key mypubkey rsa
+show crypto call admission statistics
+show crypto gkm
+show crypto gkm rekey sa
+show crypto gkm rekey sa detail
+show crypto gkm gm
+show crypto gkm gm acl
+show crypto gkm gm pubkey
+show crypto gkm gm rekey detail
+show crypto gkm gm replay
+show crypto gkm ipsec sa
+show crypto gkm ks
+show crypto gkm ks acl
+show crypto gkm ks coop
+show crypto gkm ks coop version
+show crypto gkm ks identifier detail
+show crypto gkm ks policy
+show crypto gkm ks rekey
+show crypto gkm ks replay
+show crypto gkm diagnose events
+show crypto gkm diagnose errors
+show crypto gkm ks member total
+show crypto gkm ks member total detail
+show crypto gkm ks member summary
+show license udi
+show license udi standby
+show license status
+show license status standby
+show buffers
+show buffers usage
+show inventory
+show region
+show dmvpn detail
+show wsma tech-support
+show wsma summary
+show wsma profiles
+show wsma services
+show wsma history
+show crypto ace slot 9 stats
+show crypto ace redundancy
+show crypto ace mace
+show crypto eli all
+show crypto ace collection
+show crypto engine accelerator statistic
+show crypto eli all
+show platform hardware chassis active qfp datapath utilization
+show platform hardware chassis active qfp statistics drop
+show platform hardware crypto-device status
+show platform hardware crypto-device statistics
+show platform software cpu alloc
+show platform software system processor
+show platform
+show platform resources
+show platform software status control-processor brief
+show romvar
+show platform software tech-support
+show version installed
+show version running
+show platform hardware qfp active infrastructure punt config cause
+show platform hardware qfp active infrastructure punt internal-interface
+show platform hardware qfp active interface platform internal0/0/rp:0
+show platform hardware qfp active interface platform internal0/0/recycle:0
+show platform hardware qfp active interface platform internal0/0/crypto:0
+show platform hardware qfp active infrastructure uidb internal0/0/rp:0 input config
+show platform hardware qfp active infrastructure uidb internal0/0/recycle:0 input config
+show platform hardware qfp active infrastructure uidb internal0/0/rp:0 output config
+show platform hardware qfp active infrastructure uidb internal0/0/recycle:0 output config
+show platform hardware qfp active infrastructure punt statistics interface 1
+show platform hardware qfp active infrastructure punt statistics interface 2
+show platform hardware qfp active infrastructure punt statistics interface 3
+show platform hardware qfp active infrastructure punt statistics interface 4
+show platform hardware qfp active interface platform internal0/0/rp:0 statistics
+show platform hardware qfp active interface platform internal0/0/recycle:0 statistics
+show platform hardware qfp active infrastructure punt statistics type per-cause
+show platform hardware qfp active infrastructure punt statistics type global-drop
+show platform hardware qfp active infrastructure punt statistics type punt-drop
+show platform hardware qfp active infrastructure punt statistics type inject-drop
+show platform hardware qfp active statistics drop
+show platform hardware qfp active system state
+show platform hardware qfp active system transactions
+show platform hardware qfp active datapath infrastructure time basic
+show platform hardware qfp active datapath infrastructure sw-lsmpi
+show platform hardware qfp active datapath infrastructure sw-ipc
+show platform hardware qfp active datapath infrastructure sw-dis
+show platform hardware qfp active datapath infrastructure sw-cio
+show platform hardware qfp active datapath infrastructure sw-nic
+show platform hardware qfp active datapath infrastructure sw-pktmem
+show platform hardware qfp active datapath infrastructure sw-hqf
+show platform hardware qfp active infrastructure exmem statistics
+show platform hardware qfp active infrastructure exmem statistics user
+show platform hardware qfp active infrastructure exmem resource
+show platform hardware qfp active infrastructure exmem region
+show platform hardware qfp active infrastructure exmem table
+show platform hardware qfp active infrastructure bqs status
+show platform hardware qfp active feature acl control
+show platform hardware qfp active feature acl tree
+show platform hardware qfp active feature tunnel state
+show platform hardware qfp active feature erspan state
+show platform hardware qfp active feature erspan session summary
+show platform hardware qfp active feature ess state
+show platform hardware qfp active feature ipfrag global
+show platform hardware qfp active feature lic-bw oversubscription detailed
+show platform hardware qfp active infrastructure chipset 0 version
+show platform hardware qfp active infrastructure chipset 0 capabilities
+show platform hardware qfp active datapath utilization
+show platform hardware qfp active datapath utilization summary
+show platform hardware qfp active datapath pmd ifdev
+show platform hardware qfp active datapath pmd port-config
+show platform hardware qfp active datapath pmd system
+show platform hardware qfp active datapath ifdev
+show platform hardware throughput level
+show hw-programmable all
+show bootlog FP active
+show bootlog RP active
+show platform software diagnostic chassis-manager R0 cpld
+show platform software diagnostic chassis-manager R0 status
+show platform software mount R0 brief
+show platform software ipc queue-based chassis-manager R0 connection
+show platform software ipc queue-based forwarding-manager R0 connection
+show platform software ipc stream-based chassis-manager F0 connection
+show platform software ipc stream-based chassis-manager F0 manager
+show platform software ipc stream-based chassis-manager R0 connection
+show platform software ipc stream-based chassis-manager R0 manager
+show platform software ipc stream-based forwarding-manager F0 connection
+show platform software ipc stream-based forwarding-manager F0 manager
+show platform software ipc stream-based forwarding-manager R0 connection
+show platform software ipc stream-based forwarding-manager R0 manager
+show platform software ipc stream-based host-manager R0 connection
+show platform software ipc stream-based host-manager R0 manager
+show platform software ipc stream-based shell-manager R0 connection
+show platform software ipc stream-based shell-manager R0 manager
+show platform software mount R0
+show platform software object-manager F0 statistic
+show platform software peer chassis-manager F0
+show platform software peer chassis-manager R0
+show platform software peer forwarding-manager F0
+show platform software peer forwarding-manager R0
+show platform software peer shell-manager
+show platform software peer shell-manager brief
+show platform software process environment host-manager R0
+show platform software process environment shell-manager RP active
+show platform software process list R0
+show platform software process list R0 summary
+show platform software status control-processor br
+show processes cpu platform
+show processes memory platform sorted location R0
+show install summary
+show facility-alarm status
+show interfaces
+show interfaces
+show environment all
+show logging
+show virtual-service
+show pnp tech-support
+show pnp time
+show pnp version
+show pnp capabilities
+show pnp reload info tracking
+show pnp udi tracking
+--show pnp device mode tracking
+show pnp image information
+show pnp hardware info
+show pnp file system info
+show pnp profile info
+show pnp stack information
+show pnp smu info
+show pnp server tracking
+show pnp config tracking
+show pnp wait time info
+show pnp lock info-
+show pnp ha tracking
+show pnp idb info
+show pnp bootstrap tracking
+show pnp script tracking
+show pnp discovery-
+show pnp dns info
+show pnp webui tracking
+show pnp ca bundles
+show pnp profiles
+show pnp counters
+show pnp tasks---
+show pnp requests---
+show pnp file backup tracking
+show pnp services
+show pnp cert service info
+show pnp errors tracking
+show pnp reconfig
+show pnp topology
+show pnp interface tracking
+show pnp cmd tracking
+show pnp monitor tracking (1)
+show pnp event watch tracking
+show pnp event action tracking
+show pnp event notify tracking
+show pnp trace
+show pnp history
+show pnp diag
+show pnp monitor logging
+show pnp auto-install tech-support
+show ip traffic
+show platform software mount r0
+show platform software mount r1
+show ip bgp summary
+show ip nat statistics
+show ip ports all
+show process memory platform accounting
+show platform hardware qfp active feature ipsec state
+show crypto ikev2 stats
+show history all
+show arp summary
+show adjacency summary
+show ip route summary
+show ipv6 route summary
+show platform hardware qfp active datapath utilization
+show platform hardware qfp active feature lic-bw oversubscription
+show platform software ipsec policy statistics detail
+show platform software ipsec fp active inventory

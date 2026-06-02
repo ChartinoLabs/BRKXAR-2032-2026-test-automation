@@ -5,11 +5,6 @@ test_cases:
     labels: []
     commands:
       - command: show ip ssh | sec Enabled
-  - title: '[NX-OS] Verify VLAN Name'
-    purpose: This test case validates that the VLAN Name (vlanshowbr-vlanname) tied to any given VLAN ID ((vlanshowbr-vlanid)), is as expected, assuming the VLAN was named.
-    labels: []
-    commands:
-      - command: show vlan brief
   - title: '[SDWAN-MANAGER] Verify vManage Device Status'
     purpose: |
       * Query the vManage controller to retrieve the status of all managed devices in the SD-WAN fabric.

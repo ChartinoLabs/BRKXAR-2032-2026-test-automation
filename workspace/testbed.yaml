@@ -360,3 +360,74 @@ devices:
         - nxosv9kv
         - nxosv9k
         - nexus
+  VMANAGE:
+    credentials:
+      default:
+        username: admin
+        password: cisco123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: ssh
+      rest:
+        ip: 10.62.190.146
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: cisco123
+    type: server
+    os: linux
+    custom:
+      platform:
+        - vManage
+        - vmanage
+        - sdwan
+        - sdwan-manager
+  ISE-SANDBOX:
+    os: ise
+    type: ise
+    credentials:
+      default:
+        username: readonly
+        password: ISEisC00L
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: ssh
+      rest:
+        ip: devnetsandboxise.cisco.com
+        port: 443
+        protocol: https
+        verify: False
+        username: readonly
+        password: ISEisC00L
+    custom:
+      platform:
+        - ISE
+        - ise
+  USPS-SVS-NAC-ISE:
+    os: ise
+    type: ise
+    credentials:
+      default:
+        username: admin
+        password: cisco!123
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: ssh
+      ssh:
+        ip: 10.81.239.30
+        port: 22
+      rest:
+        ip: 10.81.239.30
+        port: 443
+        protocol: https
+        verify: False
+        username: admin
+        password: cisco!123
+    custom:
+      platform:
+        - ISE
+        - ise
