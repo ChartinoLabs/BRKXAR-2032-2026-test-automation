@@ -1,4 +1,3 @@
----
 issues:
 - title: '[IOS-XE] Verify EIGRP Neighbor Adjacencies'
   purpose: |
@@ -7,7 +6,7 @@ issues:
   labels:
   - new-test-case
   - GenAI
-  - ready-for-script-creation
+  - PR-Created-Linked
   commands:
   - command: show vrf
     command_output: |2-
@@ -134,7 +133,7 @@ issues:
   labels:
   - new-test-case
   - GenAI
-  - ready-for-script-creation
+  - PR-Created-Linked
   commands:
   - command: show vlan brief
     command_output: |-
@@ -280,7 +279,7 @@ issues:
   labels:
   - new-test-case
   - GenAI
-  - ready-for-script-creation
+  - PR-Created-Linked
   commands:
   - command: show vrf
     command_output: |-
