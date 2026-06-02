@@ -1,4 +1,3 @@
----
 issues:
 - title: '[IOS-XE] Verify EIGRP Neighbor Adjacencies'
   purpose: |
@@ -6,7 +5,7 @@ issues:
   labels:
   - new-test-case
   - GenAI
-  - ready-for-script-creation
+  - PR-Created-Linked
   commands:
   - command: show vrf
     command_output: |2-
@@ -129,11 +128,13 @@ issues:
     DUTS.<name>.eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>.eigrp_interface.<interface_name>.eigrp_nbr.<neighbor_ip>: eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>.eigrp_interface.<interface_name>.eigrp_nbr.<neighbor_ip>
   added_to_cxtmyaml: ''
 - title: '[NX-OS] Verify VLAN Name'
-  purpose: This test case validates that the VLAN Name (vlanshowbr-vlanname) tied to any given VLAN ID ((vlanshowbr-vlanid)), is as expected, assuming the VLAN was named.
+  purpose: This test case validates that the VLAN Name (vlanshowbr-vlanname) tied
+    to any given VLAN ID ((vlanshowbr-vlanid)), is as expected, assuming the VLAN
+    was named.
   labels:
   - new-test-case
   - GenAI
-  - ready-for-script-creation
+  - PR-Created-Linked
   commands:
   - command: show vlan brief
     command_output: |-
