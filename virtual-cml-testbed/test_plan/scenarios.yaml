@@ -26,8 +26,10 @@ scenarios:
         depends_on:
         - gate-post-shutdown
         test_case_groups:
+        - version-baseline
         - bgp-summary-baseline
         - ospf-neighbor-baseline-post-shutdown
+        - interface-baseline
       normalize:
         name: Normalize R1 GigabitEthernet2 (R1-R2 link)
         depends_on:
