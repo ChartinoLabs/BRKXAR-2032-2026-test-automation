@@ -31,58 +31,7 @@ ENV=virtual-cml-testbed    # or: physical-testbed
 Four IOS-XE routers in a square mesh running OSPF area 0 and iBGP full-mesh (AS 65000):
 
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" width="520" height="420">
-  <!-- Background -->
-  <rect width="520" height="420" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
-  
-  <!-- Title -->
-  <text x="260" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1e293b">Virtual CML Testbed - 4x Catalyst 8000v</text>
-  
-  <!-- Links -->
-  <!-- R1-R2 (top) -->
-  <line x1="180" y1="100" x2="340" y2="100" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
-  <text x="260" y="88" text-anchor="middle" font-family="monospace" font-size="10" fill="#475569">Gi2 - 10.0.12.0/30</text>
-  
-  <!-- R3-R4 (bottom) -->
-  <line x1="180" y1="300" x2="340" y2="300" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
-  <text x="260" y="328" text-anchor="middle" font-family="monospace" font-size="10" fill="#475569">Gi3 - 10.0.34.0/30</text>
-  
-  <!-- R1-R3 (left) -->
-  <line x1="130" y1="130" x2="130" y2="270" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
-  <text x="118" y="200" text-anchor="end" font-family="monospace" font-size="10" fill="#475569">Gi3</text>
-  <text x="118" y="214" text-anchor="end" font-family="monospace" font-size="10" fill="#475569">10.0.13.0/30</text>
-  
-  <!-- R2-R4 (right) -->
-  <line x1="390" y1="130" x2="390" y2="270" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
-  <text x="402" y="200" text-anchor="start" font-family="monospace" font-size="10" fill="#475569">Gi3</text>
-  <text x="402" y="214" text-anchor="start" font-family="monospace" font-size="10" fill="#475569">10.0.24.0/30</text>
-  
-  <!-- Router nodes -->
-  <!-- R1 -->
-  <rect x="90" y="80" width="80" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-  <text x="130" y="102" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e40af">R1</text>
-  <text x="130" y="118" text-anchor="middle" font-family="monospace" font-size="9" fill="#3b82f6">IOS-XE</text>
-  
-  <!-- R2 -->
-  <rect x="350" y="80" width="80" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-  <text x="390" y="102" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e40af">R2</text>
-  <text x="390" y="118" text-anchor="middle" font-family="monospace" font-size="9" fill="#3b82f6">IOS-XE</text>
-  
-  <!-- R3 -->
-  <rect x="90" y="280" width="80" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-  <text x="130" y="302" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e40af">R3</text>
-  <text x="130" y="318" text-anchor="middle" font-family="monospace" font-size="9" fill="#3b82f6">IOS-XE</text>
-  
-  <!-- R4 -->
-  <rect x="350" y="280" width="80" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-  <text x="390" y="302" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e40af">R4</text>
-  <text x="390" y="318" text-anchor="middle" font-family="monospace" font-size="9" fill="#3b82f6">IOS-XE</text>
-  
-  <!-- Protocol info -->
-  <rect x="170" y="360" width="180" height="44" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
-  <text x="260" y="380" text-anchor="middle" font-family="monospace" font-size="10" fill="#166534">OSPF Area 0</text>
-  <text x="260" y="394" text-anchor="middle" font-family="monospace" font-size="10" fill="#166534">iBGP Full Mesh (AS 65000)</text>
-</svg>
+  <img src="docs/brkxar-2032-virtual-cml-topology.png" alt="Virtual CML Testbed - 4x Catalyst 8000v in a square mesh" width="700"/>
 </p>
 
 ### Physical Testbed
@@ -90,57 +39,7 @@ Four IOS-XE routers in a square mesh running OSPF area 0 and iBGP full-mesh (AS 
 Two routers and two switches connected in a collapsed-core topology:
 
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360">
-  <!-- Background -->
-  <rect width="520" height="360" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
-  
-  <!-- Title -->
-  <text x="260" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1e293b">Physical Testbed - IOS-XE Hardware</text>
-  
-  <!-- Tier labels -->
-  <text x="40" y="105" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" font-style="italic">Routers</text>
-  <text x="40" y="265" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" font-style="italic">Switches</text>
-  
-  <!-- Links: routers to switches -->
-  <line x1="180" y1="130" x2="180" y2="240" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
-  <line x1="180" y1="130" x2="340" y2="240" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="6,3" stroke-linecap="round"/>
-  <line x1="340" y1="130" x2="340" y2="240" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
-  <line x1="340" y1="130" x2="180" y2="240" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="6,3" stroke-linecap="round"/>
-  
-  <!-- Router-to-router link -->
-  <line x1="220" y1="105" x2="300" y2="105" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
-  
-  <!-- Switch-to-switch link -->
-  <line x1="220" y1="265" x2="300" y2="265" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
-  
-  <!-- Router nodes -->
-  <!-- TAC-R1 -->
-  <rect x="120" y="80" width="100" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-  <text x="170" y="102" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e40af">TAC-R1</text>
-  <text x="170" y="118" text-anchor="middle" font-family="monospace" font-size="9" fill="#3b82f6">IOS-XE Router</text>
-  
-  <!-- TAC-R2 -->
-  <rect x="300" y="80" width="100" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-  <text x="350" y="102" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1e40af">TAC-R2</text>
-  <text x="350" y="118" text-anchor="middle" font-family="monospace" font-size="9" fill="#3b82f6">IOS-XE Router</text>
-  
-  <!-- Switch nodes -->
-  <!-- TAC-S1 -->
-  <rect x="120" y="240" width="100" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
-  <text x="170" y="262" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#15803d">TAC-S1</text>
-  <text x="170" y="278" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">IOS-XE Switch</text>
-  
-  <!-- TAC-S2 -->
-  <rect x="300" y="240" width="100" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
-  <text x="350" y="262" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#15803d">TAC-S2</text>
-  <text x="350" y="278" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">IOS-XE Switch</text>
-  
-  <!-- Legend -->
-  <line x1="160" y1="330" x2="180" y2="330" stroke="#8b5cf6" stroke-width="2"/>
-  <text x="185" y="334" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Primary link</text>
-  <line x1="270" y1="330" x2="290" y2="330" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="295" y="334" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Cross link</text>
-</svg>
+  <img src="docs/brkxar-2032-physical-topology.png" alt="Physical Testbed - IOS-XE routers and switches" width="700"/>
 </p>
 
 ---
