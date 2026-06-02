@@ -1,2 +1,13 @@
----
-issues: []
+issues:
+  - title: '[IOS-XE] Verify EIGRP Neighbor Adjacencies'
+    purpose: |
+      The purpose of this test case is to verify the EIGRP Neighbor Adjacencies on the device. The eigrp instance > vrf > address_family > eigrp_interface > eigrp_nbr IP attribute (no other attributes) should match the expected values from the jobfile parameters.
+    labels: []
+    commands:
+      - command: show vrf
+      - command: show ip eigrp vrf RED neighbors
+  - title: '[NX-OS] Verify VLAN Name'
+    purpose: This test case validates that the VLAN Name (vlanshowbr-vlanname) tied to any given VLAN ID ((vlanshowbr-vlanid)), is as expected, assuming the VLAN was named.
+    labels: []
+    commands:
+      - command: show vlan brief
