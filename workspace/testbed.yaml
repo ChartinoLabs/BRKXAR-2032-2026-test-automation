@@ -46,7 +46,7 @@ devices:
         - iosxe
         - ios
         - csr1000v
-  REAL-APIC:
+  APIC:
     credentials:
       default:
         username: admin
@@ -56,7 +56,7 @@ devices:
         class: unicon.Unicon
         via: ssh
       rest:
-        ip: 10.81.239.51
+        ip: 10.81.239.29
         port: 443
         protocol: https
         verify: False
