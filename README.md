@@ -11,7 +11,7 @@ This demo ships with **two testbed definitions** - a virtual lab and a physical 
 | Environment   | Directory              | Devices                   | Notes                       |
 | ------------- | ---------------------- | ------------------------- | --------------------------- |
 | Virtual (CML) | `virtual-cml-testbed/` | 4x Catalyst 8000v routers | Runs on Cisco Modeling Labs |
-| Physical      | `physical-testbed/`    | 2x routers + 2x switches  | Real IOS-XE hardware        |
+| Physical      | `physical-testbed/`    | 4x IOS-XE routers         | Real IOS-XE hardware        |
 
 Select which environment to use via the `ENV` variable in your `.env` file:
 
@@ -36,10 +36,10 @@ Four IOS-XE routers in a square mesh running OSPF area 0 and iBGP full-mesh (AS 
 
 ### Physical Testbed
 
-Two routers and two switches connected in a collapsed-core topology:
+Four IOS-XE routers in a square mesh running OSPF area 0 and iBGP full-mesh (AS 65000):
 
 <p align="center">
-  <img src="docs/brkxar-2032-physical-topology.png" alt="Physical Testbed - IOS-XE routers and switches" width="700"/>
+  <img src="docs/brkxar-2032-physical-topology.png" alt="Physical Testbed - 4x IOS-XE routers in a square mesh" width="700"/>
 </p>
 
 ---
