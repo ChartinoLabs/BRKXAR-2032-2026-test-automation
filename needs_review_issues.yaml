@@ -6,7 +6,7 @@ issues:
   labels:
   - new-test-case
   - GenAI
-  - Criteria-Ready-For-SME-Review
+  - ready-for-script-creation
   commands:
   - command: show vrf
     command_output: |2-
@@ -133,7 +133,7 @@ issues:
   labels:
   - new-test-case
   - GenAI
-  - Criteria-Ready-For-SME-Review
+  - ready-for-script-creation
   commands:
   - command: show vlan brief
     command_output: |-
