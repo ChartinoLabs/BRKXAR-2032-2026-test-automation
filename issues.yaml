@@ -13,3 +13,12 @@ issues:
     labels: []
     commands:
       - command: show vlan brief
+  - title: '[NX-OS] Verify OSPF Router ID'
+    purpose: |
+      * Verify the OSPF router ID for each OSPF instance in each VRF.
+      * Validate the value at vrf.<vrf_name>.address_family.ipv4.instance.<instance_id>.router_id
+        equals the expected value from the jobfile parameters.
+    labels: []
+    commands:
+      - command: show vrf
+      - command: show ip ospf vrf RED
