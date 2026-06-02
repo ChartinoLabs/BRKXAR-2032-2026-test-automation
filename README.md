@@ -117,9 +117,7 @@ Manage device configuration via Terraform (IOS XE as Code under Cisco's [Network
 
 ## Demo Scenario: Link Shutdown and Recovery
 
-The default scenario (`link-shutdown-r1r2`) demonstrates automated validation across an operational change - shutting down the R1-to-R2 link and verifying convergence:
-
-**Phase flow (end-to-end via `make test`):**
+The default scenario (`link-shutdown-r1r2`) demonstrates automated validation across an operational change - shutting down the R1-to-R2 link and verifying convergence. When run end-to-end via `make test`, Huginn executes all phases in sequence and automatically polls protocol state at convergence gates until the topology stabilizes before proceeding:
 
 1. **Pre-change** - Verify baseline state (version, interfaces, OSPF, BGP)
 2. **Shutdown** - Shut R1 GigabitEthernet2 (the R1-R2 link)
@@ -129,16 +127,14 @@ The default scenario (`link-shutdown-r1r2`) demonstrates automated validation ac
 6. **Convergence gate** - Wait for protocols to recover
 7. **Post-normalize** - Verify full recovery to original baseline
 
-When running **end-to-end** (`make test`), convergence gates execute automatically between phases - Huginn polls protocol state until the topology stabilizes before proceeding.
-
-When running **phase-by-phase** with individual Makefile targets, there are no automatic gates between your commands. You must wait (~30-60s) for the network to converge before running the next verification phase:
+You can also run each phase individually with Makefile targets for debugging or step-by-step demos. Note that when running phase-by-phase, there are no automatic convergence gates between your commands, so you must wait (~30-60s) for the network to converge before running the next verification phase:
 
 1. `make pre-change` - Verify baseline state
 2. `make shutdown` - Shut R1 GigabitEthernet2
-3. **Wait ~30-60s** for OSPF/BGP to reconverge
+3. Wait ~30-60s for OSPF/BGP to reconverge
 4. `make post-shutdown` - Verify post-failure state
 5. `make normalize` - Restore R1 GigabitEthernet2
-6. **Wait ~30-60s** for protocols to recover
+6. Wait ~30-60s for protocols to recover
 7. `make post-normalize` - Verify full recovery
 
 ---
