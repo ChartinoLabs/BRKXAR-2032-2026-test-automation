@@ -1,4 +1,3 @@
----
 issues:
 - title: '[IOS-XE] Verify EIGRP Neighbor Adjacencies'
   purpose: |
@@ -6,7 +5,7 @@ issues:
   labels:
   - new-test-case
   - GenAI
-  - needs-criteria
+  - Criteria-Ready-For-SME-Review
   commands:
   - command: show vrf
     command_output: |2-
@@ -101,16 +100,41 @@ issues:
       }
     parser_used: Genie
     output_from_device: iosxe-r1
-  pass_criteria: ''
-  jobfile_parameters: ''
-  jobfile_parameters_mapping: ''
+  pass_criteria: |
+    * For each EIGRP instance in the jobfile parameters, ensure the instance exists in the parsed data via "eigrp_instance.<instance>".
+    * For each VRF under each EIGRP instance in the jobfile parameters, ensure the VRF exists in the parsed data via "eigrp_instance.<instance>.vrf.<vrf_name>".
+    * For each address-family under each EIGRP instance and VRF in the jobfile parameters, ensure the address-family exists in the parsed data via "eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>".
+    * For each EIGRP interface under each instance/VRF/address-family in the jobfile parameters, ensure the interface exists in the parsed data via "eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>.eigrp_interface.<interface_name>".
+    * For each expected EIGRP neighbor IP under each instance/VRF/address-family/interface in the jobfile parameters, ensure the neighbor IP exists in the parsed data via "eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>.eigrp_interface.<interface_name>.eigrp_nbr.<neighbor_ip>".
+  jobfile_parameters: |
+    device_connectivity_type: ssh
+    DUTS:
+      IOS-XE-Router-1:
+        eigrp_instance:
+          "<instance>":
+            vrf:
+              "<vrf_name>":
+                address_family:
+                  "<address_family>":
+                    eigrp_interface:
+                      "<interface_name>":
+                        eigrp_nbr:
+                          "<neighbor_ip>": {}
+  jobfile_parameters_mapping: |
+    DUTS.<name>.eigrp_instance.<instance>: eigrp_instance.<instance>
+    DUTS.<name>.eigrp_instance.<instance>.vrf.<vrf_name>: eigrp_instance.<instance>.vrf.<vrf_name>
+    DUTS.<name>.eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>: eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>
+    DUTS.<name>.eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>.eigrp_interface.<interface_name>: eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>.eigrp_interface.<interface_name>
+    DUTS.<name>.eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>.eigrp_interface.<interface_name>.eigrp_nbr.<neighbor_ip>: eigrp_instance.<instance>.vrf.<vrf_name>.address_family.<address_family>.eigrp_interface.<interface_name>.eigrp_nbr.<neighbor_ip>
   added_to_cxtmyaml: ''
 - title: '[NX-OS] Verify VLAN Name'
-  purpose: This test case validates that the VLAN Name (vlanshowbr-vlanname) tied to any given VLAN ID ((vlanshowbr-vlanid)), is as expected, assuming the VLAN was named.
+  purpose: This test case validates that the VLAN Name (vlanshowbr-vlanname) tied
+    to any given VLAN ID ((vlanshowbr-vlanid)), is as expected, assuming the VLAN
+    was named.
   labels:
   - new-test-case
   - GenAI
-  - needs-criteria
+  - Criteria-Ready-For-SME-Review
   commands:
   - command: show vlan brief
     command_output: |-
@@ -235,7 +259,16 @@ issues:
       }
     parser_used: NXOSJSON
     output_from_device: nxos-sw1
-  pass_criteria: ''
-  jobfile_parameters: ''
-  jobfile_parameters_mapping: ''
+  pass_criteria: |
+    * For each VLAN in the jobfile parameters under "DUTS.<name>.vlans.<vlan_id>", ensure a corresponding VLAN entry exists in the parsed data at "TABLE_vlanbriefxbrief.ROW_vlanbriefxbrief" where "vlanshowbr-vlanid" equals "<vlan_id>".
+    * For each VLAN in the jobfile parameters under "DUTS.<name>.vlans.<vlan_id>", ensure the matched parsed VLAN entry’s "vlanshowbr-vlanname" is equal to the expected "vlanshowbr-vlanname" value from "DUTS.<name>.vlans.<vlan_id>.vlanshowbr-vlanname".
+  jobfile_parameters: |
+    device_connectivity_type: ssh
+    DUTS:
+      <name>:
+        vlans:
+          "<vlan_id>":
+            vlanshowbr-vlanname: "<expected_vlan_name>"
+  jobfile_parameters_mapping: |
+    DUTS.<name>.vlans.<vlan_id>.vlanshowbr-vlanname: "TABLE_vlanbriefxbrief.ROW_vlanbriefxbrief[?vlanshowbr-vlanid==`<vlan_id>`].vlanshowbr-vlanname | [0]"
   added_to_cxtmyaml: ''
