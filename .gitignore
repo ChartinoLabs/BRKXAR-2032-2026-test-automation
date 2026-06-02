@@ -16,3 +16,4 @@ huginn.log
 **/xeac/*.tfplan
 **/xeac/.terraform.lock.hcl
 workspace-backup/
+.backups/

@@ -5,11 +5,6 @@ test_cases:
     labels: []
     commands:
       - command: show ip ssh | sec Enabled
-  - title: '[NX-OS] Verify VLAN Name'
-    purpose: This test case validates that the VLAN Name (vlanshowbr-vlanname) tied to any given VLAN ID ((vlanshowbr-vlanid)), is as expected, assuming the VLAN was named.
-    labels: []
-    commands:
-      - command: show vlan brief
   - title: '[SDWAN-MANAGER] Verify vManage Device Status'
     purpose: |
       * Query the vManage controller to retrieve the status of all managed devices in the SD-WAN fabric.
@@ -355,7 +350,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Instance Enabled State'
     purpose: |
       * Verify the OSPF instance enabled state for each OSPF instance in each VRF.
@@ -363,7 +359,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF NSR Enabled State'
     purpose: |
       * Verify the OSPF Non-Stop Routing (NSR) enabled state for each OSPF instance in each VRF.
@@ -371,7 +368,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF BFD Enabled State'
     purpose: |
       * Verify the OSPF BFD enabled state for each OSPF instance in each VRF.
@@ -379,7 +377,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Opaque LSA Support'
     purpose: |
       * Verify the OSPF opaque LSA support flag for each OSPF instance in each VRF.
@@ -387,7 +386,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF LLS Support'
     purpose: |
       * Verify the OSPF Link-Local Signaling (LLS) support flag for each OSPF instance in each VRF.
@@ -395,7 +395,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area Transit Capability'
     purpose: |
       * Verify the OSPF area transit capability flag for each OSPF instance in each VRF.
@@ -403,7 +404,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF NSSA Support'
     purpose: |
       * Verify the OSPF NSSA support flag for each OSPF instance in each VRF.
@@ -411,7 +413,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF DB Exchange Summary List Optimization'
     purpose: |
       * Verify the OSPF database exchange summary list optimization flag for each OSPF instance in each VRF.
@@ -419,7 +422,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Event Log Enabled State'
     purpose: |
       * Verify the OSPF event log enabled state for each OSPF instance in each VRF.
@@ -427,7 +431,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Event Log Max Events'
     purpose: |
       * Verify the OSPF event log maximum events setting for each OSPF instance in each VRF.
@@ -435,7 +440,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Event Log Mode'
     purpose: |
       * Verify the OSPF event log mode for each OSPF instance in each VRF.
@@ -443,7 +449,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Stub Router Always Flag'
     purpose: |
       * Verify the OSPF stub router always flag for each OSPF instance in each VRF.
@@ -451,7 +458,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Stub Router Include Stub Flag'
     purpose: |
       * Verify the OSPF stub router include-stub flag for each OSPF instance in each VRF.
@@ -459,7 +467,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Stub Router Summary LSA Flag'
     purpose: |
       * Verify the OSPF stub router summary LSA suppression flag for each OSPF instance in each VRF.
@@ -467,7 +476,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Stub Router External LSA Flag'
     purpose: |
       * Verify the OSPF stub router external LSA suppression flag for each OSPF instance in each VRF.
@@ -475,7 +485,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF SPF Throttle Start Interval'
     purpose: |
       * Verify the OSPF SPF throttle start interval for each OSPF instance in each VRF.
@@ -483,7 +494,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF SPF Throttle Hold Interval'
     purpose: |
       * Verify the OSPF SPF throttle hold interval for each OSPF instance in each VRF.
@@ -491,7 +503,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF SPF Throttle Maximum Interval'
     purpose: |
       * Verify the OSPF SPF throttle maximum interval for each OSPF instance in each VRF.
@@ -499,7 +512,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF LSA Throttle Start Interval'
     purpose: |
       * Verify the OSPF LSA throttle start interval for each OSPF instance in each VRF.
@@ -507,7 +521,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF LSA Throttle Hold Interval'
     purpose: |
       * Verify the OSPF LSA throttle hold interval for each OSPF instance in each VRF.
@@ -515,7 +530,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF LSA Throttle Maximum Interval'
     purpose: |
       * Verify the OSPF LSA throttle maximum interval for each OSPF instance in each VRF.
@@ -523,7 +539,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF LSA Throttle Arrival Interval'
     purpose: |
       * Verify the OSPF LSA throttle arrival interval for each OSPF instance in each VRF.
@@ -531,7 +548,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Incremental SPF State'
     purpose: |
       * Verify the OSPF incremental SPF enabled state for each OSPF instance in each VRF.
@@ -539,7 +557,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF LSA Group Pacing Timer'
     purpose: |
       * Verify the OSPF LSA group pacing timer for each OSPF instance in each VRF.
@@ -547,7 +566,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Interface Flood Pacing Timer'
     purpose: |
       * Verify the OSPF interface flood pacing timer for each OSPF instance in each VRF.
@@ -555,7 +575,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Retransmission Pacing Timer'
     purpose: |
       * Verify the OSPF retransmission pacing timer for each OSPF instance in each VRF.
@@ -563,7 +584,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Adjacency Stagger Initial Number'
     purpose: |
       * Verify the OSPF adjacency stagger initial number for each OSPF instance in each VRF.
@@ -571,7 +593,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Adjacency Stagger Maximum Number'
     purpose: |
       * Verify the OSPF adjacency stagger maximum number for each OSPF instance in each VRF.
@@ -579,7 +602,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF External LSA Count'
     purpose: |
       * Verify the OSPF external LSA count for each OSPF instance in each VRF.
@@ -587,7 +611,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF External LSA Checksum'
     purpose: |
       * Verify the OSPF external LSA checksum sum for each OSPF instance in each VRF.
@@ -595,7 +620,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Opaque AS LSA Count'
     purpose: |
       * Verify the OSPF opaque AS LSA count for each OSPF instance in each VRF.
@@ -603,7 +629,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Opaque AS LSA Checksum'
     purpose: |
       * Verify the OSPF opaque AS LSA checksum sum for each OSPF instance in each VRF.
@@ -611,7 +638,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF DC Bitless LSA Count'
     purpose: |
       * Verify the OSPF DC bitless LSA count for each OSPF instance in each VRF.
@@ -619,7 +647,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Do Not Age LSA Count'
     purpose: |
       * Verify the OSPF do-not-age LSA count for each OSPF instance in each VRF.
@@ -627,7 +656,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Total Areas'
     purpose: |
       * Verify the total number of OSPF areas for each OSPF instance in each VRF.
@@ -635,7 +665,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Total Normal Areas'
     purpose: |
       * Verify the total number of normal OSPF areas for each OSPF instance in each VRF.
@@ -643,7 +674,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Total Stub Areas'
     purpose: |
       * Verify the total number of stub OSPF areas for each OSPF instance in each VRF.
@@ -651,7 +683,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Total NSSA Areas'
     purpose: |
       * Verify the total number of NSSA OSPF areas for each OSPF instance in each VRF.
@@ -659,7 +692,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Total Transit Capable Areas'
     purpose: |
       * Verify the total number of transit-capable OSPF areas for each OSPF instance in each VRF.
@@ -667,7 +701,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF External Flood List Length'
     purpose: |
       * Verify the OSPF external flood list length for each OSPF instance in each VRF.
@@ -675,7 +710,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Graceful Restart IETF Helper Enable'
     purpose: |
       * Verify the OSPF IETF graceful restart helper-enable state for each OSPF instance in each VRF.
@@ -683,7 +719,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Graceful Restart IETF Enable'
     purpose: |
       * Verify the OSPF IETF graceful restart enabled state for each OSPF instance in each VRF.
@@ -691,7 +728,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Graceful Restart Cisco Helper Enable'
     purpose: |
       * Verify the OSPF Cisco graceful restart helper-enable state for each OSPF instance in each VRF.
@@ -699,7 +737,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Graceful Restart Cisco Enable'
     purpose: |
       * Verify the OSPF Cisco graceful restart enabled state for each OSPF instance in each VRF.
@@ -707,7 +746,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Auto Cost Reference Bandwidth'
     purpose: |
       * Verify the OSPF auto-cost reference bandwidth for each OSPF instance in each VRF.
@@ -715,7 +755,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Auto Cost Bandwidth Unit'
     purpose: |
       * Verify the OSPF auto-cost bandwidth unit for each OSPF instance in each VRF.
@@ -723,7 +764,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Auto Cost Enable State'
     purpose: |
       * Verify the OSPF auto-cost enabled state for each OSPF instance in each VRF.
@@ -731,7 +773,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF ABR Flag'
     purpose: |
       * Verify the OSPF ABR (Area Border Router) flag for each OSPF instance in each VRF.
@@ -739,7 +782,8 @@ test_cases:
         equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Domain ID Type'
     purpose: |
       * Verify the OSPF domain ID type for each OSPF instance in each VRF.
@@ -747,7 +791,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Domain ID Value'
     purpose: |
       * Verify the OSPF domain ID value for each OSPF instance in each VRF.
@@ -755,7 +800,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area ID'
     purpose: |
       * Verify the OSPF area ID for each area in each OSPF instance in each VRF.
@@ -763,7 +809,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area Type'
     purpose: |
       * Verify the OSPF area type for each area in each OSPF instance in each VRF.
@@ -771,7 +818,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area Interfaces Count'
     purpose: |
       * Verify the OSPF area interfaces count for each area in each OSPF instance in each VRF.
@@ -779,7 +827,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area Loopback Count'
     purpose: |
       * Verify the OSPF area loopback interface count for each area in each OSPF instance in each VRF.
@@ -787,7 +836,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area SPF Last Executed'
     purpose: |
       * Verify the OSPF area SPF last executed timestamp for each area in each OSPF instance in each VRF.
@@ -795,7 +845,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area SPF Runs Count'
     purpose: |
       * Verify the OSPF area SPF runs count for each area in each OSPF instance in each VRF.
@@ -803,7 +854,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area Scope LSA Count'
     purpose: |
       * Verify the OSPF area-scope LSA count for each area in each OSPF instance in each VRF.
@@ -811,7 +863,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area Scope LSA Checksum Sum'
     purpose: |
       * Verify the OSPF area-scope LSA checksum sum for each area in each OSPF instance in each VRF.
@@ -819,7 +872,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area Scope Opaque LSA Count'
     purpose: |
       * Verify the OSPF area-scope opaque LSA count for each area in each OSPF instance in each VRF.
@@ -827,7 +881,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area Scope Opaque LSA Checksum Sum'
     purpose: |
       * Verify the OSPF area-scope opaque LSA checksum sum for each area in each OSPF instance in each VRF.
@@ -835,7 +890,8 @@ test_cases:
         equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area DCbitless LSA Count'
     purpose: |
       * Verify the OSPF area DCbitless LSA count for each area in each OSPF instance in each VRF.
@@ -843,7 +899,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area Indication LSA Count'
     purpose: |
       * Verify the OSPF area indication LSA count for each area in each OSPF instance in each VRF.
@@ -851,7 +908,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area DoNotAge LSA Count'
     purpose: |
       * Verify the OSPF area do-not-age LSA count for each area in each OSPF instance in each VRF.
@@ -859,7 +917,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Area Flood List Length'
     purpose: |
       * Verify the OSPF area flood list length for each area in each OSPF instance in each VRF.
@@ -867,7 +926,8 @@ test_cases:
         equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf
+      - command: show vrf
+      - command: show ip ospf vrf RED
   - title: '[IOS-XE] Verify OSPF Interface Router ID'
     purpose: |
       * Verify the OSPF router ID for each interface in each VRF.
@@ -875,7 +935,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Type'
     purpose: |
       * Verify the OSPF interface type for each interface in each VRF.
@@ -883,7 +944,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Cost'
     purpose: |
       * Verify the OSPF interface cost for each interface in each VRF.
@@ -891,7 +953,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Demand Circuit'
     purpose: |
       * Verify the OSPF demand circuit flag for each interface in each VRF.
@@ -899,7 +962,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface BFD Enable'
     purpose: |
       * Verify the OSPF BFD enable status for each interface in each VRF.
@@ -907,7 +971,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface IP Address'
     purpose: |
       * Verify the OSPF interface IP address for each interface in each VRF.
@@ -915,7 +980,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface ID'
     purpose: |
       * Verify the OSPF interface ID for each interface in each VRF.
@@ -923,7 +989,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Attached Method'
     purpose: |
       * Verify the OSPF interface attached method for each interface in each VRF.
@@ -931,7 +998,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Enabled State'
     purpose: |
       * Verify the OSPF interface enabled state for each interface in each VRF.
@@ -939,7 +1007,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Line Protocol'
     purpose: |
       * Verify the OSPF interface line protocol status for each interface in each VRF.
@@ -947,7 +1016,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Topology Cost'
     purpose: |
       * Verify the OSPF topology cost for each interface in each VRF.
@@ -955,7 +1025,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Topology Name'
     purpose: |
       * Verify the OSPF topology name for each interface in each VRF.
@@ -963,7 +1034,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Topology Disabled'
     purpose: |
       * Verify the OSPF topology disabled flag for each interface in each VRF.
@@ -971,7 +1043,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Topology Shutdown'
     purpose: |
       * Verify the OSPF topology shutdown flag for each interface in each VRF.
@@ -979,7 +1052,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Stub Host'
     purpose: |
       * Verify the OSPF stub host flag for each interface in each VRF (applicable to loopback interfaces).
@@ -987,7 +1061,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Transmit Delay'
     purpose: |
       * Verify the OSPF transmit delay for each interface in each VRF.
@@ -995,7 +1070,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface State'
     purpose: |
       * Verify the OSPF interface state for each interface in each VRF.
@@ -1003,7 +1079,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Priority'
     purpose: |
       * Verify the OSPF interface priority for each interface in each VRF.
@@ -1011,7 +1088,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface DR Router ID'
     purpose: |
       * Verify the OSPF designated router ID for each interface in each VRF.
@@ -1019,7 +1097,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface DR IP Address'
     purpose: |
       * Verify the OSPF designated router IP address for each interface in each VRF.
@@ -1027,7 +1106,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface BDR Router ID'
     purpose: |
       * Verify the OSPF backup designated router ID for each interface in each VRF.
@@ -1035,7 +1115,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface BDR IP Address'
     purpose: |
       * Verify the OSPF backup designated router IP address for each interface in each VRF.
@@ -1043,7 +1124,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Hello Interval'
     purpose: |
       * Verify the OSPF hello interval for each interface in each VRF.
@@ -1051,7 +1133,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Dead Interval'
     purpose: |
       * Verify the OSPF dead interval for each interface in each VRF.
@@ -1059,7 +1142,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Wait Interval'
     purpose: |
       * Verify the OSPF wait interval for each interface in each VRF.
@@ -1067,7 +1151,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Retransmit Interval'
     purpose: |
       * Verify the OSPF retransmit interval for each interface in each VRF.
@@ -1075,7 +1160,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface OOB Resync Timeout'
     purpose: |
       * Verify the OSPF out-of-band resync timeout for each interface in each VRF.
@@ -1083,7 +1169,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Passive'
     purpose: |
       * Verify the OSPF passive flag for each interface in each VRF.
@@ -1091,7 +1178,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface LLS'
     purpose: |
       * Verify the OSPF Link-Local Signaling (LLS) flag for each interface in each VRF.
@@ -1099,7 +1187,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Graceful Restart Cisco Helper'
     purpose: |
       * Verify the OSPF Cisco graceful restart helper status for each interface in each VRF.
@@ -1107,7 +1196,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Graceful Restart IETF Helper'
     purpose: |
       * Verify the OSPF IETF graceful restart helper status for each interface in each VRF.
@@ -1115,7 +1205,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface IP FRR Protected'
     purpose: |
       * Verify the OSPF IP FRR protected flag for each interface in each VRF.
@@ -1123,7 +1214,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface IP FRR Candidate'
     purpose: |
       * Verify the OSPF IP FRR candidate flag for each interface in each VRF.
@@ -1131,7 +1223,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface TI-LFA Protected'
     purpose: |
       * Verify the OSPF TI-LFA protected flag for each interface in each VRF.
@@ -1139,7 +1232,8 @@ test_cases:
       equals the expected boolean value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Flood Queue Length'
     purpose: |
       * Verify the OSPF flood queue length for each interface in each VRF.
@@ -1147,7 +1241,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Last Flood Scan Length'
     purpose: |
       * Verify the OSPF last flood scan length for each interface in each VRF.
@@ -1155,7 +1250,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Max Flood Scan Length'
     purpose: |
       * Verify the OSPF maximum flood scan length for each interface in each VRF.
@@ -1163,7 +1259,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Last Flood Scan Time'
     purpose: |
       * Verify the OSPF last flood scan time in milliseconds for each interface in each VRF.
@@ -1171,7 +1268,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Max Flood Scan Time'
     purpose: |
       * Verify the OSPF maximum flood scan time in milliseconds for each interface in each VRF.
@@ -1179,7 +1277,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Neighbor Count'
     purpose: |
       * Verify the OSPF neighbor count for each interface in each VRF.
@@ -1187,7 +1286,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Adjacent Neighbor Count'
     purpose: |
       * Verify the OSPF adjacent neighbor count for each interface in each VRF.
@@ -1195,7 +1295,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Suppressed Hello Neighbor Count'
     purpose: |
       * Verify the OSPF number of neighbors suppressing hellos for each interface in each VRF.
@@ -1203,7 +1304,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Interface Neighbor DR Router ID'
     purpose: |
       * Verify the OSPF neighbor designated router ID for each neighbor on each interface in each VRF.
@@ -1211,7 +1313,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf interface
+      - command: show vrf
+      - command: show ip ospf vrf RED interface
   - title: '[IOS-XE] Verify OSPF Neighbor Priority'
     purpose: |
       * Verify the OSPF neighbor priority for each neighbor on each interface.
@@ -1251,7 +1354,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor DR IP Address'
     purpose: |
       * Verify the Designated Router IP address for each OSPF neighbor on each interface in each VRF.
@@ -1259,7 +1363,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor BDR IP Address'
     purpose: |
       * Verify the Backup Designated Router IP address for each OSPF neighbor on each interface in each VRF.
@@ -1267,7 +1372,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Hello Options'
     purpose: |
       * Verify the OSPF hello options field for each neighbor on each interface in each VRF.
@@ -1275,7 +1381,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor DBD Options'
     purpose: |
       * Verify the OSPF database description options field for each neighbor on each interface in each VRF.
@@ -1283,7 +1390,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Dead Timer'
     purpose: |
       * Verify the OSPF dead timer value for each neighbor on each interface in each VRF.
@@ -1291,7 +1399,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Uptime'
     purpose: |
       * Verify the OSPF neighbor uptime (adjacency duration) for each neighbor on each interface in each VRF.
@@ -1299,7 +1408,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Interface ID'
     purpose: |
       * Verify the OSPF neighbor interface ID for each neighbor on each interface in each VRF where the field is present.
@@ -1307,7 +1417,8 @@ test_cases:
       equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Event Count'
     purpose: |
       * Verify the OSPF neighbor event count statistic for each neighbor on each interface in each VRF.
@@ -1315,7 +1426,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Retransmission Queue Length'
     purpose: |
       * Verify the OSPF neighbor retransmission queue length for each neighbor on each interface in each VRF.
@@ -1323,7 +1435,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Total Retransmissions'
     purpose: |
       * Verify the total retransmission count for each OSPF neighbor on each interface in each VRF.
@@ -1331,7 +1444,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Last Retransmission Scan Length'
     purpose: |
       * Verify the last retransmission scan length statistic for each OSPF neighbor on each interface in each VRF.
@@ -1339,7 +1453,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Last Retransmission Max Scan Length'
     purpose: |
       * Verify the last retransmission maximum scan length statistic for each OSPF neighbor on each interface in each VRF.
@@ -1347,7 +1462,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Last Retransmission Scan Time'
     purpose: |
       * Verify the last retransmission scan time (in milliseconds) for each OSPF neighbor on each interface in each VRF.
@@ -1355,7 +1471,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Neighbor Last Retransmission Max Scan Time'
     purpose: |
       * Verify the last retransmission maximum scan time (in milliseconds) for each OSPF neighbor on each interface in each VRF.
@@ -1363,7 +1480,8 @@ test_cases:
       equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf neighbor detail
+      - command: show vrf
+      - command: show ip ospf vrf RED neighbor detail
   - title: '[IOS-XE] Verify OSPF Border Router Route Type'
     purpose: |
       * Verify the route type (intra-area or inter-area) for each border router entry in each OSPF process.
@@ -1527,7 +1645,8 @@ test_cases:
       * Validate the extracted value equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info Process ID'
     purpose: |
       * Verify the OSPF Process ID for each process in each VRF.
@@ -1535,7 +1654,8 @@ test_cases:
       * Validate the extracted integer value equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info Base Topology MTID'
     purpose: |
       * Verify the OSPF Base Topology MTID for each process in each VRF.
@@ -1543,7 +1663,8 @@ test_cases:
       * Validate the extracted integer value equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info Topology Priority'
     purpose: |
       * Verify the OSPF topology priority for each process in each VRF.
@@ -1551,7 +1672,8 @@ test_cases:
       * Validate the extracted integer value equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info Max Metric Originating'
     purpose: |
       * Verify whether the router is originating router-LSAs with maximum metric for each OSPF process in each VRF.
@@ -1559,7 +1681,8 @@ test_cases:
       * Validate the extracted value equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info Transit Capable Areas Count'
     purpose: |
       * Verify the number of transit-capable areas for each OSPF process in each VRF.
@@ -1567,7 +1690,8 @@ test_cases:
       * Validate the extracted integer value equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info Initial SPF Schedule Delay'
     purpose: |
       * Verify the initial SPF schedule delay (in msecs) for each OSPF process in each VRF.
@@ -1575,7 +1699,8 @@ test_cases:
       * Validate the extracted integer value equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info Minimum Hold Time Between SPFs'
     purpose: |
       * Verify the minimum hold time between two consecutive SPFs (in msecs) for each OSPF process in each VRF.
@@ -1583,7 +1708,8 @@ test_cases:
       * Validate the extracted integer value equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info Maximum Wait Time Between SPFs'
     purpose: |
       * Verify the maximum wait time between two consecutive SPFs (in msecs) for each OSPF process in each VRF.
@@ -1591,7 +1717,8 @@ test_cases:
       * Validate the extracted integer value equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info Area ID'
     purpose: |
       * Verify the OSPF area identifier for each area in each OSPF process in each VRF.
@@ -1599,7 +1726,8 @@ test_cases:
       * Validate the extracted value equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info SPF Last Executed'
     purpose: |
       * Verify the elapsed time since the SPF algorithm was last executed for each area in each OSPF process in each VRF.
@@ -1607,7 +1735,8 @@ test_cases:
       * Validate the extracted value equals the expected value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Topology-Info SPF Execution Count'
     purpose: |
       * Verify the number of times the SPF algorithm has been executed for each area in each OSPF process in each VRF.
@@ -1615,7 +1744,8 @@ test_cases:
       * Validate the extracted integer value equals the expected integer value from the jobfile parameters.
     labels: []
     commands:
-      - command: show ip ospf topology-info
+      - command: show vrf
+      - command: show ip ospf topology-info vrf RED
   - title: '[IOS-XE] Verify OSPF Traffic Statistics Last Clear'
     purpose: |
       * Verify the last time OSPF traffic counters were cleared at the global level.
