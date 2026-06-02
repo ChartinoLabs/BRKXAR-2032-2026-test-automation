@@ -117,7 +117,7 @@ Manage device configuration via Terraform (IOS XE as Code under Cisco's [Network
 
 ## Demo Scenario: Link Shutdown and Recovery
 
-The default scenario (`link-shutdown-r1r2`) demonstrates automated validation across an operational change - shutting down the R1-to-R2 link and verifying convergence. When run end-to-end via `make test`, Huginn executes all phases in sequence and automatically polls protocol state at convergence gates until the topology stabilizes before proceeding:
+The default scenario (`link-shutdown-r1r2`) demonstrates automated validation across an operational change - shutting down the R1-to-R2 link and verifying convergence. When run end-to-end via `make test`, all phases execute in sequence. Between change and verification phases, convergence gate jobs poll protocol state until the topology stabilizes before proceeding:
 
 1. **Pre-change** - Verify baseline state (version, interfaces, OSPF, BGP)
 2. **Shutdown** - Shut R1 GigabitEthernet2 (the R1-R2 link)
