@@ -228,17 +228,17 @@ Phase Flow (end-to-end via `make test`):
   post-normalize <── [convergence gate] <── normalize <───┘
 ```
 
-When running **end-to-end** (`make test`), convergence gates execute automatically between phases — Huginn polls protocol state until the topology stabilizes before proceeding.
+When running **end-to-end** (`make test`), convergence gates execute automatically between phases - Huginn polls protocol state until the topology stabilizes before proceeding.
 
 When running **phase-by-phase** with individual Makefile targets, there are no automatic gates between your commands. You must wait for the network to converge before running the next verification phase:
 
-1. `make pre-change` — Verify version, interfaces, OSPF neighbors, BGP peers match baseline
-2. `make shutdown` — Shut R1 GigabitEthernet2 (the R1–R2 link)
+1. `make pre-change` - Verify version, interfaces, OSPF neighbors, BGP peers match baseline
+2. `make shutdown` - Shut R1 GigabitEthernet2 (the R1–R2 link)
 3. **Wait for convergence** (~30–60s for OSPF/BGP to reconverge around the failure)
-4. `make post-shutdown` — Verify OSPF/BGP reconverged correctly
-5. `make normalize` — Restore R1 GigabitEthernet2
+4. `make post-shutdown` - Verify OSPF/BGP reconverged correctly
+5. `make normalize` - Restore R1 GigabitEthernet2
 6. **Wait for convergence** (~30–60s for protocols to recover)
-7. `make post-normalize` — Verify full recovery to original baseline
+7. `make post-normalize` - Verify full recovery to original baseline
 
 ---
 
