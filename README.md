@@ -119,25 +119,27 @@ Manage device configuration via Terraform (IOS XE as Code under Cisco's [Network
 
 The default scenario (`link-shutdown-r1r2`) demonstrates automated validation across an operational change - shutting down the R1-to-R2 link and verifying convergence:
 
-```
-Phase Flow (end-to-end via `make test`):
+**Phase flow (end-to-end via `make test`):**
 
-  pre-change ──> shutdown ──> [convergence gate] ──> post-shutdown
-                                                          │
-  post-normalize <── [convergence gate] <── normalize <───┘
-```
+1. **Pre-change** - Verify baseline state (version, interfaces, OSPF, BGP)
+2. **Shutdown** - Shut R1 GigabitEthernet2 (the R1-R2 link)
+3. **Convergence gate** - Wait for OSPF/BGP to reconverge around the failure
+4. **Post-shutdown** - Verify protocols reconverged correctly
+5. **Normalize** - Restore R1 GigabitEthernet2
+6. **Convergence gate** - Wait for protocols to recover
+7. **Post-normalize** - Verify full recovery to original baseline
 
 When running **end-to-end** (`make test`), convergence gates execute automatically between phases - Huginn polls protocol state until the topology stabilizes before proceeding.
 
-When running **phase-by-phase** with individual Makefile targets, there are no automatic gates between your commands. You must wait for the network to converge before running the next verification phase:
+When running **phase-by-phase** with individual Makefile targets, there are no automatic gates between your commands. You must wait (~30-60s) for the network to converge before running the next verification phase:
 
-1. `make pre-change` - Verify version, interfaces, OSPF neighbors, BGP peers match baseline
-2. `make shutdown` - Shut R1 GigabitEthernet2 (the R1–R2 link)
-3. **Wait for convergence** (~30–60s for OSPF/BGP to reconverge around the failure)
-4. `make post-shutdown` - Verify OSPF/BGP reconverged correctly
+1. `make pre-change` - Verify baseline state
+2. `make shutdown` - Shut R1 GigabitEthernet2
+3. **Wait ~30-60s** for OSPF/BGP to reconverge
+4. `make post-shutdown` - Verify post-failure state
 5. `make normalize` - Restore R1 GigabitEthernet2
-6. **Wait for convergence** (~30–60s for protocols to recover)
-7. `make post-normalize` - Verify full recovery to original baseline
+6. **Wait ~30-60s** for protocols to recover
+7. `make post-normalize` - Verify full recovery
 
 ---
 
