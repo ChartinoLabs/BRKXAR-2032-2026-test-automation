@@ -17,5 +17,5 @@ dev = [
 ]
 
 [tool.uv.sources]
-huginn = { git = "https://github.com/ChartinoLabs/Huginn.git" }
-muninn-parsers = { git = "https://github.com/ChartinoLabs/Muninn.git" }
+huginn = { git = "https://github.com/ChartinoLabs/Huginn.git", rev = "31d515321969cdbe19dace18de6155d687c7a39c" }
+muninn-parsers = { git = "https://github.com/ChartinoLabs/Muninn.git", rev = "676cc8a200a53765c163e254d8a98ebc46e29560" }
